@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="/load.js"></script>
+    <script src="/music.js"></script>
+    <script src="/nutshell.js"></script>
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
+
+    <style>
+
+        /* WARNING: this page is a bit of a mess!*/
+
+        .link {
+            background-color: rgb(173, 214, 101);
+        }
+
+        main {
+            height: 90vh;
+            
+        }
+
+        details {
+            margin-bottom: 20px;
+        }
+
+        .rec-list {
+            list-style-type: none; /* removes default bullets so I can use logos instead */
+        }
+
+        .rec-list li {
+            display: flex; /* the image + text combo is actually just flexbox! */
+        }
+
+        .logo {
+            height: auto; /* Keeps image aspect ratio */
+            border-radius: 50px; /* Makes them circles */
+            max-width: 70px;
+            max-height: 70px;
+            width: 100%;
+            flex-shrink: 0; /* Prevents the image from shrinking */
+            margin-right: 2vw; /* Space between the image and text */
+        }
+
+        .rec-list .single-video { /* had to specify the parent in this case to increase specificity hhh */
+            width: 60%;
+            aspect-ratio: 16 / 9;
+            flex-shrink: 0; /* Prevents the image from shrinking */
+            margin-right: 2vw; /* Space between the image and text */
+        }
+        
+
+        .rec-list h4:hover{
+            text-decoration: none; /* otherwise it's set to be underlined which would be confusing */
+        }
+
+        .rec-list iframe{
+            width: 49%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+        }
+
+        
+
+        .comicpage {
+            max-width: 40%;
+        }
+
+        .highlightbox h6 {
+            font-size: large;
+            color: #015418;
+            padding: 7px;
+            background-color:#cbea9dc5;
+            border-radius: 30px;
+            border: 1.7px #e67700 solid;
+        }
+
+        .highlightbox h6:hover, .h5-special:hover {
+            text-decoration: underline;
+            background-color:#dcf58fc5;
+            border: 3px #e67700 solid;
+        }
+
+        .h5-special {
+            font-size: medium;
+            color: #76519f;
+            padding: 7px;
+            background-color:#cbea9dc5;
+            border-radius: 30px;
+            border: 1.7px #76519f solid;
+        }
+        
+        .marginbottom {
+            margin-bottom: 8px;
+        }
+
+        .verticalvideos {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            flex-shrink: 0;
+            margin-right: 2vw;
+        }
+
+        .marginbottom .verticalvideos iframe { /* MORE SPECIFICITY (the more parent classes you define the more specific it becomes. Intuitively it should be the opposite but hhh oh well) */
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            margin-bottom: 8px;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+            <!-- Start of english text -->
+                <div class="eng">
+                    <h2>Recommendations</h2>
+                    <p>
+                        If you like my website, you might also like other things I like! Or, maybe I know about something that could be useful to you!<br>
+                        I will try to feature websites, artists, creators, software, that I find to be especially useful, interesting, or that have made my life better somehow.<br>
+                        This list will be expanded in the future!
+                    </p>
+                    <p>
+                        ☀ If you are looking for <span class="purple">links to other personal websites that I enjoy, check out <a href="links.html">the links section</a></span> instead!
+                    </p>
+                    <p>
+                        🇮🇹 This page is strongly language-dependant: I will only feature things in English on this page. <strong class="purple">For Italian-speaking creators or websites</strong>, you will soon click on the language button on the top right of the page to get different lists here. Coming soon!
+                    </p>
+
+                    <!-- Fav thing ever -->
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>♡ My favorite things on the Web ♡</h3>
+                        </summary>
+                        <p>
+                            <ul class="rec-list">
+                                <!-- Vi Hart -->
+                                <li>
+                                    <img class="logo" src="images/misc/recs/vihart.jpg" alt="A sharpie doodle of a happy triangle on checkered paper.">
+                                    <div class="rec-text highlightbox2">
+                                        <h4>Vi Hart</h4>
+                                        <p>
+                                            <a href="https://www.youtube.com/@Vihart">YouTube</a>, <a href="http://www.youtube.com/vihartvihart">second channel</a>, <a href="https://vimeo.com/vihart">vimeo</a>, <a href="https://web.archive.org/web/20220528232531/http://vihart.com/">website (no longer online)</a>
+                                        </p>
+                                        <p>
+                                            <i>"Mathemusician and Virtual Reality Philosopher."</i>
+                                        </p>
+                                        <p>
+                                            <br>
+                                            Science is love and wonder for the world and trying to understand it better. Poetry is trying to put that love and wonder in words. This stays my favorite channel ever. It's wonderful, and I love it.
+                                        </p>
+                                        <details>
+                                            <summary><h5>Featured Videos:</h5></summary>
+                                            <!-- Totality -->
+                                            <iframe src="https://www.youtube.com/embed/QV2oTxX2oZc?si=GhhEDOFNpEU9Tqb2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <!-- Doodling in Math: Spirals, Fibonacci, and Being a Plant [1 of 3] -->
+                                            <iframe src="https://www.youtube.com/embed/ahXIMUkSXX0?si=-Is2ZKSUKRhNcluA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <!-- Hexaflexagons -->
+                                            <iframe src="https://www.youtube.com/embed/VIVIegSt81k?si=UUfnVVuiEG9iCvEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <!-- Wind and Mr. Ug -->
+                                            <iframe src="https://www.youtube.com/embed/4mdEsouIXGM?si=DDrv5xSMFV_vNWtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </details>
+                                    </div>
+                                </li>
+
+                                <!-- Nicky Case -->
+                                <li>
+                                    <img class="logo" src="images/misc/recs/ncase.jpg" alt="Smiling stickman head with black hair and red glasses.">
+                                    <div class="rec-text highlightbox2">
+                                        <h3>Nicky Case</h3>
+                                        <p>
+                                            <i>"Hi, I'm Nicky! I make shtuff for curious & playful folks."</i>
+                                        </p>
+                                        <p>
+                                            <a href="https://ncase.me/">Website</a>, <a href="https://blog.ncase.me/">Blog</a>, <a href="https://www.youtube.com/@nickycase9260">Youtube</a>
+                                        </p>
+                                        <p>
+                                            I'm a curious and playful fellow and I looove her shtuff! :D
+                                        </p>
+                                        <p>
+                                            <a href="https://aisafety.dance/">AI Safety for Fleshy Humans</a>, <a href="https://explorabl.es/">Explorable Explanations</a>, <a href="https://ncase.me/anxiety/">Adventures with Anxiety</a>, <a href="https://ncase.me/faq/#toc_9"><em>"How do I learn..."</em></a>, <a href="/main-site/hobbies/critters/my-critters.html#nutshells!">:Nutshell</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <!-- Saint Andrewism -->
+                                <li>
+                                <img class="logo" src="images/misc/recs/andrewism.jpg" alt="Stylized outline of a man with kinky hair, against a yellow background. One corner of his mouth is curled up in a smile.">
+                                    <div class="rec-text highlightbox2">
+                                        <h4>Saint Andrewism</h4>
+                                        <p>
+                                            <a href="https://www.youtube.com/@Andrewism">YouTube</a>, <a href="https://www.patreon.com/saintdrew">Patreon</a>, <a href="https://andrew-sage.carrd.co/">carrd</a>
+                                        </p>
+                                        <p>
+                                            A channel about people, communities, better ways to live. Anarchism, imagining utopias via ideas like "solarpunk" and then finding real ways to harness the desire for something better in tangible action.
+                                        </p>
+                                        <p>
+                                            He takes a measured, realist, yet positive and constructive approach to how we can imagine and act for a better, different future.
+                                        </p>
+                                        <p>
+                                            I have so, so much more still to learn - and even more to put in practice - but Andrewism has been my first stepping stone in this process, and I'm not even over it yet. Thank you so much, Andrew!
+                                        </p>
+                                        <details>
+                                            <summary><h5>Featured Videos:</h5></summary>
+                                            <p>
+                                                I'm in the process of rewatching them all, so a list of favorites will come later! :-)
+                                            </p>>
+                                            
+                                        </details>
+                                    </div>
+                                </li>
+
+                                <!-- Atomic Shrimp -->
+                                <li>
+                                    <img class="logo" src="images/misc/recs/atomicshrimp.jpg" alt="A small green shrimp, with red orbiting lines around it, making it appear like an atom.">
+                                    <div class="rec-text highlightbox2">
+                                        <h4>Atomic Shrimp</h4>
+                                        <p>
+                                            <a href="https://www.youtube.com/@AtomicShrimp">YouTube</a>, <a href="https://atomicshrimp.com/">website</a>
+                                        </p>
+
+                                        <p>
+                                            He creates a wide variety of videos - cooking, foraging, trying weird or novel food, tinkering with electronics, woodworking, making clay, cooking challenges on a budget, scambaiting - and many other such things.<br>
+                                            Being a fellow curious human who wants to do a bit of everything, this channel is a treasure of inspiration and serotonin. I guess it's lovely to see there's people like you out there, and who actually managed to start dabbling in a bit of everything, following their own curiosity.
+                                        </p>
+                                        <p>
+                                            Before switching over to youtube, he recorded his miscellaneous projects over a website. There's a quote on that website that I think distilled well the essence of his channel, and that stuck with me over the years:
+                                        </p>
+                                        
+                                        <p>
+                                            <i>"This website is really just about the things I do in my spare time. <span class="purple">My interests include wild food, experimental cooking, assorted crafts, multimedia work and the deliberate, but benign and mild-mannered pursuit of the absurd.</span><br>
+                                            <br>
+                                            Founded a short time after my 40th birthday, the site has been described by some as documentary of my mid-life crisis. Maybe that's not entirely untrue - looking back, it does mark a bit of a turning point, when I <span class="purple">stopped just formulating lists of things I might find interesting to do, and started doing them.<br>
+                                            <br>
+                                            My lists of future projects don't ever seem to get any shorter and most of the items on them are quite trivial, but it means I seldom experience boredom.</span>"</i>
+                                        </p>
+                                        <details>
+                                            <summary><h5>Featured Videos:</h5></summary>
+                                            <p>His content is so variegated that it's hard to pick a selection! He does so many different things!</p>
+                                            <iframe src="https://www.youtube.com/embed/-fLdNDbZ6ec?si=T66_wUiivYfCVgSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/7aShSbFfHXY?si=OQpudgdurkLC5VQ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/gIlYJSO7lok?si=4cwu8DCz7z4MyEXn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/wYBruVj9jt8?si=WmpaQUq0CJViw6yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </details>
+                                    </div>
+                                </li>
+
+                                <!-- Catadromously -->
+                                <li>
+                                    <img class="logo" src="images/misc/recs/catadromously.jpg" alt="A stylized red and orange sea slug, surrounded by blue and purple oceanic plants.">
+                                        <div class="rec-text highlightbox2">
+                                            <h4>catadromously</h4>
+                                            <p>
+                                                <a href="https://catadromously.tumblr.com/">Tumblr</a>, <a href="https://itstaishe.carrd.co/">Carrd</a>
+                                            </p>
+                                            <p>
+                                                My favorite tumblr blog and one of my favorite artists. Her blog is a wonderfully crafted collection of inspiring posts and images, diligently <a href="https://itstaishe.carrd.co/#catadromisleading">tagged by what I can only describe as "deep vibe"</a>. A trip down the right tags usually leaves me in tears, deeply inspired, filled with a newfound zest for life and love for humans or, most commonly, all of the above.<br>
+                                                Also, her art is amazing. Here's a sample if you wish (with links to the original post.)
+                                            </p>
+                                            <details>
+                                                <summary><h5>Featured Artwork</h5></summary>
+                                                Click on the first page of each comic to be redirected to the tumblr page!<br>
+                                                <a href="https://catadromously.tumblr.com/post/628896981561016320/the-dubious-philosophy-of-salmon">
+                                                    <img class="comicpage" src="https://64.media.tumblr.com/f61c225bb9c84913c7780eb87efecea0/1a1c7e21d1bb47f6-0f/s500x750/af674d62cf723c1ba9a6c78af21c9bb2bfb94529.png" alt="the dubious philosophy of salmon">
+                                                </a>
+                                                <a href="https://catadromously.tumblr.com/post/650206973464395776/please-welcome-brood-x">
+                                                    <img class="comicpage" src="https://64.media.tumblr.com/adab2425c1a3fa3ddf0423759642a322/60a6cb95ebe12bda-8a/s1280x1920/246459c5baa95bd881c6b26862d64d71c79e8c55.png" alt="Brood X (cicadas)">
+                                                </a>
+                                                <a href="https://catadromously.tumblr.com/post/631441732444323840/i-took-an-art-prompt-in-honor-of-1000-followers">
+                                                    <img class="comicpage" src="https://64.media.tumblr.com/75556e77c1990f88ea7835b102205855/ff622d23bbe583b7-f5/s640x960/2bbcfa9a5ff10a9ecca39133da91d547fc092f55.png">
+                                                </a>
+                                                <a href="https://catadromously.tumblr.com/post/639071908930928640/reasons">
+                                                    <img class="comicpage" src="https://64.media.tumblr.com/4ced0deaae04b2491285facc8135a6a0/121e85e8e4bd800c-d3/s540x810/407317bf62c7a8f8327b029ba7e5774de174063e.png" alt="reasons">
+                                                </a>
+                                                <a href="https://catadromously.tumblr.com/post/637153960983232512/i-believe-it-was-lesbiansforboromir-who-requested">
+                                                    <img class="comicpage" src="https://64.media.tumblr.com/a82c1f36c6c4f73b7d18fc1f0fdc1ac2/f24ed06ab07eef81-48/s1280x1920/260c35f8d6cdbdbaf130587af13ed975e1823155.png" alt="Matryoshka Slug">
+                                                </a>
+                                            </details>
+                                        </div>
+                                </li>
+
+                                <!-- Headspace Hotel -->
+                                <li>
+                                    <img class="logo" src="images/misc/recs/headspacehotel.pnj" alt="A very tall tree seen from below, towering over you.">
+                                    <div class="rec-text highlightbox2">
+                                        <h4>headspace-hotel</h4>
+                                        <p>
+                                            <a href="https://www.tumblr.com/headspace-hotel/666121703823441920/my-wikipedia-poems">Tumblr + Wikipedia Poems</a>
+                                        </p>
+                                        <p>
+                                            Though I adore to no end her blogging about plants, creatures, and being curious and appreciating the natural world surrounding you - what really keeps coming back to this blog over and over is her <em><a href="https://www.tumblr.com/headspace-hotel/666121703823441920/my-wikipedia-poems?source=share">Wikipedia Poems</a></em> - a form of found poetry, created by stringing together pieces of wikipedia articles rather than, say, words from a magazine.
+                                        </p>
+                                        <p>
+                                            I am pretty sure I discovered at least 3 new emotions just by reading her poetry - and a couple more by reading other people's own wikipedia poems, that she <a href="https://www.tumblr.com/headspace-hotel/tagged/wikipedia%20poetry">reblogs under the tag "wikipedia poetry"</a>. I love this art medium so much.
+                                        </p>
+                                        <p>
+                                            Favorite wikipoetry:
+                                            <ul>
+                                                <li>
+                                                    <a href="https://www.tumblr.com/headspace-hotel/713969043166674944">"Disaster Taxon" by headspace-hotel</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.tumblr.com/ooopsey/678568284219719680/wanted-to-try-my-hand-at-one-of-those-wikipedia">"the ginko stays" by oopsey</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.tumblr.com/headspace-hotel/685719542412066816/dragon-poem-assembled-using-quotations-from">"Dragon" by headspace-hotel</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.tumblr.com/headspace-hotel/707454809255673856/eughty-about-love">"about love" by eughty</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.tumblr.com/isolatedphenomenon/666063218139119616/id-a-poem-cut-and-pasted-from-various-wikipedia">untitled by isolatedphenomenon</a>
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+
+                    <!-- Websites & Miscellanea -->
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>Websites & Miscellanea</h3>
+                        </summary>
+                        <ul class="rec-list">
+                            
+                            <!-- Nicky Case -->
+                            <li>
+                                <img class="logo" src="images/misc/recs/ncase.jpg" alt="Smiling stickman head with black hair and red glasses.">
+                                <div class="rec-text highlightbox2">
+                                    <h3>Nicky Case</h3>
+                                    <p>
+                                        <i>"Hi, I'm Nicky! I make shtuff for curious & playful folks."</i>
+                                    </p>
+                                    <p>
+                                        <a href="https://ncase.me/">Website</a>, <a href="https://blog.ncase.me/">Blog</a>, <a href="https://www.youtube.com/@nickycase9260">Youtube</a>
+                                    </p>
+                                    <p>
+                                        I'm a curious and playful fellow and I looove her shtuff! :D
+                                    </p>
+                                    <p>
+                                        <a href="https://aisafety.dance/">AI Safety for Fleshy Humans</a>, <a href="https://explorabl.es/">Explorable Explanations</a>, <a href="https://ncase.me/anxiety/">Adventures with Anxiety</a>, <a href="https://ncase.me/faq/#toc_9"><em>"How do I learn..."</em></a>, <a href="/main-site/hobbies/critters/my-critters.html#nutshells!">:Nutshell</a>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- xkcd -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/xkcd.png" alt="Two faceless stick figures - Cueball is taller and bald, Megan is shorter and has black hair.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://xkcd.com/"><h3 style="background-color: rgb(173, 214, 101);">xkcd</h3></a>
+                                    <p>
+                                        <em>"A webcomic of romance, sarcasm, math, and language."</em>
+                                    </p>
+                                    <p>
+                                        A lovely webcomic with some especially creative entries. This one strip is especially dear to me! Check out other awesome entries below. Also, thank you <a href="https://amuffin.is-a.dev/">amagicmuffin</a> for sending the two coolest ones my way! <3
+                                    </p>
+                                    <img src="images/other-art/xkcd-grownups.png" style="max-width: 100%;" alt="Four panel comic. First panel: Cueball is standing at Megan's open doorway. Playpen balls fill her house, and a small gate is keeping them in. Cueball: 'Hey, I was wondering if you had plans for-- holy crap, what happened to your apartment?'. Megan: 'I filled it with playpen balls!'. Cueball: 'I... What? Why?'. Second Panel: Megan: 'Because we're grown-ups now, and it's our turn to decide what that means'. Third panel: Megan has gone back inside. Cueball is still at the doorway, taken aback. Fourth panel: Cueball is not in front of the door anymore; the small gate keeping the playpen balls inside is now open, and the balls overflow from the open door. A heart shaped baloon floats out of the door.">
+                                    <details>
+                                        <summary>
+                                            Favorite entries:
+                                        </summary>
+
+                                        <ul>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/1110/">Click and Drag</a>. Want to see if you've found it all? Check <a href="https://victorz.ca/xkcd_map/#8/66.443/-31.641">this out</a>. I recommend playing a bit first though!
+                                            </li style="display: list-item;">
+                                            <li style="display: inline;">
+                                                <a href="https://www.explainxkcd.com/wiki/index.php/1190:_Time">Time</a> - this one needs context, and you can't experience it the same way that it could be originally experienced - so the link directs to the wiki acticle pertaining to that entry. But you can experience it arguably better! The wiki has a link for another place to experience it today, which is <a href="https://deplicator.github.io/xkcd-time-at-your-pace/">here</a>.
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/1732/">Earth Temperature Timeline</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/1133/">Up Goer Five</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/1571/">Car Model Names</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/936/">Password Strenght</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/123/">Centrifugal Force</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/612/">Estimation</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/610/">Sheeple</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/980/">Money</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/502/">Dark Flow</a>
+                                            </li>
+                                            <li style="display: list-item;">
+                                                <a href="https://xkcd.com/931/">Lanes</a> <span style="font-size: small;"> - Content Warning - talks about cancer</span>
+                                            </li>
+
+                                        </ul>
+                                        <p>
+                                            If you don't get the joke, are unsure what it refers to, etc, there's an entire <a href="https://www.explainxkcd.com/wiki/index.php/Main_Page">small wiki</a> dedicated to this!
+                                        </p>
+                                    </details>
+                                </div>
+                            </li>
+
+                            <!-- Parable of the Polygons -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/potp.png" alt="A yellow triangle and a blue square looking a bit sad">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://ncase.me/"><h3 style="background-color: rgb(173, 214, 101);">Parable of the Polygons</h3></a>
+                                    <p>
+                                        <em>"A playable post on the shape of society"</em>
+                                    </p>
+                                    <p>
+                                        Created by <a href="https://ncase.me/">Nicky Case</a> and <a href="https://web.archive.org/web/20220528232531/http://vihart.com/">Vi Hart</a>, two of my favourite creators! It's an "explorable explanation" that tries to explain how bias can lead to segregation, and offers a possible solution - all in an easy to understand and cute way. It's also public domain! What an all around lovely piece of art and education tool.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Windows 93 -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/w93.png" alt="A logo that looks like the Windows 95 one, except it's in cyan, magenta and lime green, and sports a smiley face.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://www.windows93.net/"><h3 style="background-color: rgb(173, 214, 101);">Windows 93</h3></a>
+                                    <p>
+                                        An OS that runs in your browser! Well, okay, it's just a website that mimicks an OS. But it's damn entertaining and extraordinarily well made.
+                                    </p>
+                                    <p>
+                                        It's filled to the brim with easter eggs, hidden jokes, weird content and even a few actual emulators and genuine software. An amazing time waster and a good website to explore in a boring afternoon!
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- The Uncensored Library -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/the-uncensored-library_2.jpg" alt="Closed fist over a pen created with Minecraft blocks. Overlayed, there's written: '#Truth Finds A Way'.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://www.uncensoredlibrary.com/"><h3 style="background-color: rgb(173, 214, 101);">The Uncensored Library</h3></a>
+                                    <p>
+                                        <em>"The digital home of press freedom."</em>
+                                    </p>
+                                    <p>
+                                        From the website: <em>"In many countries, websites, social media and blogs are controlled by oppressive leaders. Young people, in particular, are forced to grow up in systems where their opinion is heavily manipulated by governmental disinformation campaigns."</em>
+                                    </p>
+                                    <p>
+                                        <em>"But even where almost all media is blocked or controlled, the world's most successful computer game is still accessible. Reporters Without Borders (RSF) uses this loophole to bypass internet censorship to bring back the truth - within Minecraft."</em>
+                                    </p>
+                                    <p>
+                                        From <a href="https://en.wikipedia.org/wiki/The_Uncensored_Library">Wikipedia</a>: <em>"The Uncensored Library is a Minecraft server and map released by Reporters Without Borders and created by BlockWorks, DDB Berlin, and MediaMonks as an attempt to circumvent censorship in countries without freedom of the press. The library contains banned reporting from Mexico, Russia, Vietnam, Saudi Arabia, Egypt, Belarus, Brazil, and Eritrea. An entire wing is given to each country, each containing several banned articles. The library was released on March 12, 2020, the World Day Against Cyber Censorship. The two ways to access the library are to download a map from the official website, or to connect to their Minecraft server."</em>
+                                    </p>
+                                    <div style="text-align: center;">
+                                        <img src="images/misc/recs/the-uncensored-library_3.jpg" style="max-width: 40%; border: 4px #e67700 solid; border-radius: 3px;" alt="Screenshot of a Minecraft map, showing a statue of a closed fist over a pen, and a monumental white building in the background.">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Video Game Recommendation Engine -->
+                            <li>
+                                <img class="logo" src="images/misc/recs/videogamerecomm.png" style="border-radius: 0px; width: 100%;" alt="Logo showing orange and red shapes rotating around a small orange center.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://apps.quanticfoundry.com/recommendations/gamerprofile/videogame/"><h3>Video Game Recommendation Engine</h3></a>
+                                    <p>
+                                        Enter at least three games you like, and get recommended more videogames!
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- PkmnCards -->
+                            <li>
+                                <img class="logo" src="images/misc/recs/pkmncards.jpg" style="background: rgb(66,81,127); border: 1 px solid #dcdcdc; border-radius: 6px; transform: rotate(-5deg);" alt="Artwork of Clefairy from one of the TGC cards.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://pkmncards.com/"><h3>PkmnCards</h3></a>
+                                    <p>
+                                        A massive collection of high quality Pokemon TGC Cards images. I've always loved the artwork on the cards, so this is a stunning project to see!
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Pokemon Booster Pack Simulator -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/pokemonboosterpack.png" alt="Pokemon Booster Pack Simulator">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://pokemonboosterpack.com/"><h3>Pokemon Booster Pack Simulator</h3></a>
+                                    <p>
+                                        A blast to the past: relive the experience of opening a pack of one of the older series of cards and sifting through them to see what you get. There are actual probabilities at play, as well.
+                                    </p>
+                                    <p>
+                                        If you're on desktop, there's also a <a href="https://pokemonboosterpack.com/archive/pages/gbc">booster pack simulator for the Pokemon TGC on the Game Boy Color</a>!
+                                    </p>
+                                </div>
+                            </li>
+                            
+
+                        </ul>
+                    </details>
+
+                    <!-- Online Tools & Services-->
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>Online Tools & Services</h3>
+                        </summary>
+                        <ul class="rec-list">
+
+                            <!-- Nekoweb -->
+                            <li>
+                                <img class="logo" style="width: 100%; border-radius: 5px;" src="images/misc/recs/nekoweb.gif" alt="Animated gif of a cat peeking out of a computer motitor">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://nekoweb.org/"><h3 style="background-color: rgb(173, 214, 101);">Nekoweb</h3></a>
+                                    <p>
+                                        Alternative to Neocities! Recently found it and cannot say much about it - but it's good to have alternatives, and great to see more interest in this neat hobby!
+                                    </p>
+                                    <a href="https://nekoweb.org/"><img src="images/buttons/nekoweb2.gif"></a>
+                                </div>
+                            </li>
+
+                            <!-- myNoise -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/mynoise.png" alt="A circle with four vertical lines inside of varying heights, reminiscent of music volume.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://mynoise.net/"><h3 style="background-color: rgb(173, 214, 101);">myNoise</h3></a>
+                                    <p>
+                                        From the website: <em>"Discover a world of immersive and customizable soundscapes that can enhance focus, relaxation, and sleep. Choose from noise generators, nature sounds and ambient music to create your perfect audio environment. Explore our vast library of interactive sound generators and find your audio haven!"</em>
+                                    </p>
+                                    <p>
+                                        The amazing project of a French sound designer. He carries this project out for passion and, apparently, because he's a madman. I owe this website a lot: it <a href="https://mynoise.net/NoiseMachines/windSeaRainNoiseGenerator.php">helped me mask unwanted noises</a> before I had decent earbuds, <a href="https://mynoise.net/NoiseMachines/auralScannerNoiseGenerator.php">helped me focus</a> since late highschool, even managed to <a href="https://mynoise.net/NoiseMachines/catPurrNoiseGenerator.php">soothe a panic attack</a> and <a href="https://mynoise.net/NoiseMachines/isabelleKnightHypnosisTalkGenerator.php">induce a short lucid dream</a>. If I bought some decent headphones and earbuds, and started to pay attention to how noise and music makes me feel, I owe it all to him.
+                                    </p>
+                                    <p>
+                                        Most of the generators are available for free - but even just one tiny donation unlocks everything else for life. I'm proud to be a patron of such an amazing project!
+                                    </p>
+                                </div>
+                            </li>
+                            
+                            <!-- Photopea -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/photopea.png" alt="A stylized, curly letter P on a teal background.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://www.photopea.com/"><h3 style="background-color: rgb(173, 214, 101);">Photopea</h3></a>
+                                    <p>
+                                        It's an image manipulation program almost on par with Photoshop - but for free, in your browser! It's pretty amazing what it can do.
+                                    </p>
+                                    <p>
+                                        It also has one of the best available tools <a href="https://www.photopea.com/tuts/magic-cut-remove-image-background-online/">to automatically remove a background</a> from a photo that I've found so far - I find it to be on par with Photoshop's native one.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- compressimage.io -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/compressimage.png" alt="A stylized, smiling corgi.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://compressimage.io/"><h3 style="background-color: rgb(173, 214, 101);">compressimage.io</h3></a>
+                                    <p>
+                                        <em>"Compress JPG and PNG images at light speed with Browser based Image compressor. Private, Works Offline, No Limits, Low carbon footprint."</em>
+                                    </p>
+                                    <p>
+                                        A truly amazing image compression tool. It's completely browser based - images are never sent to any servers, which means it's super fast, private, completely free (creator isn't looking to profit from it), and works offline too.<br>
+                                        Compressing images is super useful if you want your pages to load faster! (as you can see, I don't use it very often. :^) )
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- croppola -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/croppola.png" alt="A stylized, colourful camera lens.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://croppola.com/"><h3 style="background-color: rgb(173, 214, 101);">croppola</h3></a>
+                                    <p>
+                                        Online image cropping tool that, among other things, tries to calculate the "best" crop for the image you upload. Very handy!
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Catbox -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/catbox.png" alt="A stylized cardboard box - a little cat paw is poking out from the front, and a tail from the back.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://catbox.moe/"><h3 style="background-color: rgb(173, 214, 101);">Catbox</h3></a>
+                                    <p>
+                                        Free storage for files up to 200MB. For personal/noncommercial use only. Free, simple, no fuss, requires no registration, but might be blocked in some regions.
+                                    </p>
+                                    <a href="https://litterbox.catbox.moe/"><h3 style="background-color: rgb(173, 214, 101);">Litterbox</h3></a>
+                                    <p>
+                                        Same base service - but offers, instead, temporary storage for files up to 1GB, but only for a maximum of 3 days! 
+                                    </p>
+                                    <p>
+                                        I personally find the anime girls quite disturbing, but I guess it's a small price to pay for a good service.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- goblin.tools -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/goblin-tools.png" alt="The stylized face of a goblin, smiling at the viewer.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://goblin.tools/"><h3 style="background-color: rgb(173, 214, 101);">goblin.tools</h3></a>
+                                    <p>
+                                        From the website: <em>"goblin.tools is a collection of small, simple, single-task tools, mostly designed to help neurodivergent people with tasks they find overwhelming or difficult."</em>
+                                    </p>
+                                    <p>
+                                        <em>"Most tools will use AI technologies in the back-end to achieve their goals. Currently this includes OpenAI's models. As the tools and backend improve, the intent is to move to an open source alternative."</em>
+                                    </p>
+                                    <p>
+                                        Did you therapist tell you that you need to break down your tasks into smaller tasks, too? No? Well okay. Give this one a go if you're overwhelmed anyways. It often helps.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- You feel like shit. -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play/index.html"><h3 style="background-color: rgb(173, 214, 101);">You feel like shit.</h3></a>
+                                    <p>
+                                        <em>"This is meant to be an interactive flow chart for people who struggle with self care, executive dysfunction, and/or who have trouble reading internal signals. It's designed to take as much of the weight off of you as possible, so each decision is very easy and doesn't require much judgment."</em>
+                                    </p>
+                                    <p>
+                                        <em>"Set aside some time--maybe an hour total- to allow yourself to work through each step. Don't rush or skip ahead--just follow the directions. Self care is important, and you deserve to devote some time to it."</em>
+                                    </p>
+                                    <p>
+                                        Great for the times when everything sucks and you feel like shit and you don't know why.<br>I have it pinned to my bookmarks toolbar, so it's easy to access for when the executive dysfunction hits really hard.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Purelymail -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/purelymail.png" alt="A stylized mail envelope with a big purple eye in the middle.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://purelymail.com/"><h3 style="background-color: rgb(173, 214, 101);">Purelymail</h3></a>
+                                    <p>
+                                        <em>"Cheap, no-nonsense email"</em>
+                                    </p>
+                                    <p>
+                                        My email provider! I love it. My brainworms decide that I get a lot of serotonin for having an insane number of different email addresses, so I can have clean and neat inboxes used each for a specific purpose.
+                                    </p>
+                                    <p>
+                                        I own a couple of domain names, so the easiest way for me to do that would be to create multiple email addresses using my own domains. However, this ends up being crazy expensive on most email providers! Which is unfair, especially considering that I actually use few resources (I'm sending back and forth large file, or storing them for a long time).
+                                    </p>
+                                    <p>
+                                        For 10$/yr or <a href="https://purelymail.com/advancedpricing">less</a>, you get basically unlimited users, and a fair amount of email space if you're just sending and receiving mail. I love this service so much.
+                                    </p>
+                                    <p>
+                                        The email clients I use are <a href="https://www.thunderbird.net/">Thunderbird</a> on Desktop and <a href="https://k9mail.app/">K-9 Mail</a> on Android. Purelymail works flawlessly with both - however, as an heads up, <a href="https://forum.k9mail.app/t/sent-emails-not-being-uploaded-to-server-nor-visible-in-k-9-mail/5485/2">K-9 has a common bug</a> that causes sent emails to not be saved in the "Sent" folder, unless you specifically set it up to do so.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!-- Kagi -->
+                            <li>
+                                <img class="logo" style="border-radius: 0px;" src="images/misc/recs/kagi.png" alt="A stylized letter G on a yellow background.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://kagi.com/"><h3 style="background-color: rgb(173, 214, 101);">Kagi Search</h3></a>
+                                    <p>
+                                        <em>"No ads, fast and personalised results. The search engine you deserve."</em>
+                                    </p>
+                                    <p>
+                                        At 10$/month for unlimited searches, it's definitely not an affordable service for everyone. However, if you're looking for a good alternative to Google and have some extra cash you can spend on it, or if navigating the internet is an important part of your day, do give it a try - it does have a trial period. (Hint: you could save that money by <a href="piracy.html">pirating streaming services</a> instead?)
+                                    </p>
+                                    <p>
+                                        A decent search engine is really important for me - it helps me satiate my endless curiosity, troubleshoot esoteric yet extraordinarily trivial issues, and find actual pertinent information to whatever I'm searching for. I run a lot of searches and do it daily - and although I had tried switching to other, more private search engines in the past, I had always failed to adapt. They all felt worse than google to me in terms of how quickly I could find what I was looking for - and google itself was getting more and more exasperating.
+                                    </p>
+                                    <p>
+                                        It's really hard to go back to google once you try an actually good search engine, IMO. I love being able to search directly on the smallweb, in forums, or in academic research websites; I love the way they integrate generative AI in a manner that's actually useful (you can have it summarize the results of your search, or summarize each single page you find on your search); I love being able to blacklist certain sites altogether.
+                                    </p>
+                                    <p>
+                                        Kagi still falls victim to SEO optimization to a degree, so I still have to avoid the endless pits of "top 10 products to X!" while searching for some keywords, but it still manages to be a superior experience in the long run.
+                                    </p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                            
+                    </details>
+
+                    <!-- Youtube Channels & Videos -->
+                    <details class="highlightbox">
+                        <br>
+                        <br>
+                        <summary>
+                            <h3>Youtube Channels & Videos</h3>
+                        </summary>
+
+                        <!-- Channels -->
+                        <details class="highlightbox2">
+                            <summary>
+                                <h4>Channels</h4>
+                            </summary>
+                            <br>
+                            <br>
+
+                            <!-- Learning & Science -->
+                            <!-- add vsauce-->
+                            <details class="highlightbox">
+                                <summary>
+                                    <h5 class="h5-special">Learning & Science</h5>
+                                </summary>
+                                <ul class="rec-list">
+
+                                    <!-- Vi Hart -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/vihart.jpg" alt="A sharpie doodle of a happy triangle on checkered paper.">
+                                        <div class="rec-text highlightbox2">
+                                            <h6>Vi Hart</h6>
+                                            <p>
+                                                <a href="https://www.youtube.com/@Vihart">YouTube</a>, <a href="http://www.youtube.com/vihartvihart">second channel</a>, <a href="https://vimeo.com/vihart">vimeo</a>, <a href="https://web.archive.org/web/20220528232531/http://vihart.com/">website (no longer online)</a>
+                                            </p>
+                                            <p>
+                                                <i>"Mathemusician and Virtual Reality Philosopher."</i>
+                                            </p>
+                                            <p>
+                                                <br>
+                                                Science is love and wonder for the world and trying to understand it better. Poetry is trying to put that love and wonder in words. This stays my favorite channel ever. It's wonderful, and I love it.
+                                            </p>
+                                            <p>
+                                                I challenge you to watch some of her stuff and not come out of it with at least a moderate curiosity or appreciation for maths!
+                                            </p>
+                                            <p>
+                                                Also featured in "my favorite things on the Web"
+                                            </p>
+                                            <details>
+                                                <summary><h5>Featured Videos:</h5></summary>
+                                                <!-- Totality -->
+                                                <iframe src="https://www.youtube.com/embed/QV2oTxX2oZc?si=GhhEDOFNpEU9Tqb2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Doodling in Math: Spirals, Fibonacci, and Being a Plant [1 of 3] -->
+                                                <iframe src="https://www.youtube.com/embed/ahXIMUkSXX0?si=-Is2ZKSUKRhNcluA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Hexaflexagons -->
+                                                <iframe src="https://www.youtube.com/embed/VIVIegSt81k?si=UUfnVVuiEG9iCvEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Wind and Mr. Ug -->
+                                                <iframe src="https://www.youtube.com/embed/4mdEsouIXGM?si=DDrv5xSMFV_vNWtl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </details>
+                                        </div>
+                                    </li>
+
+                                    <!-- Clint's Reptiles -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/clintsreptiles.jpg" alt="An happy chamaleon, perched upon a box that reads 'Clint's reptiles', followed by a youtube logo.">
+                                        <div class="rec-text highlightbox2">
+                                            <a href="https://www.youtube.com/@ClintsReptiles"><h6 class="link">Clint's Reptiles</h6></a>
+                                            <p>
+                                                This guy <em>oozes</em> love and passion for what he does: talk about biology and all sort of "creepy crawlies" - though his channel started as a "reptiles only" channel, he soon branched out to other critters and communicating biology as a whole (he has some amazing videos on taxonomy!)
+                                            </p>
+                                            <p>
+                                                He's incredibly fun and passionate. I always come out of his videos with a smile and more love for more animals that maybe I didn't even know much about before!
+                                            </p>
+                                            <details>
+                                                <summary><h5>Featured Videos:</h5></summary>
+                                                <!-- Top 5 Reptiles For Beginners -->
+                                                <iframe src="https://www.youtube.com/embed/p2-foCd0k2o?si=92pNpxssD3jPQATT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Jumping Spider, The Best Pet Arachnid? -->
+                                                <iframe src="https://www.youtube.com/embed/7MXsYh8PnPU?si=rryiLQy8kbwo_YHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Zoologist Reacts To Viral Animal TikTok -->
+                                                <iframe src="https://www.youtube.com/embed/YVmcTau9ZpE?si=6E4vJbSEShULMmlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Human Child, The Best Pet? Nope! -->
+                                                <iframe src="https://www.youtube.com/embed/uFx9wDjlC-s?si=7e9n6aq_cnAqW1XR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </details>
+                                        </div>
+                                    </li>
+
+                                    <!-- Neuroscientifically Challenged -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/neuroscientificallychallenged.jpg" alt="Stylized outline of a serene-looking person with what appears to be stylized disc over their head, much like those used in electroencephalography.">
+                                        <div class="rec-text highlightbox2">
+                                            <h4>Neuroscientifically Challenged</h4>
+                                            <p>
+                                                <a href="https://www.youtube.com/@Neuroscientificallychallenged">YouTube</a>, <a href="https://neuroscientificallychallenged.com/">Website</a>
+                                            </p>
+                                            <p>
+                                                I've been interested in neurosciences for a few months, but found I completely lacked the very basics to study anything about it. I found Marc Dingman's videos to be informative, clear, and concise. I especially like the 10 minute ones and - much like he suggests - I find it useful to pause, rewind, and re-watch them.
+                                            </p>
+                                        </div>
+                                    </li>    
+
+                                    </ul>
+                            </details>
+
+                            <!-- Video Essays -->
+                            <details class="highlightbox">
+                                <summary>
+                                    <h5 class="h5-special">Video Essays</h5>
+                                </summary>
+                                <ul class="rec-list">
+
+                                    <!-- Philosophy Tube -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/philosophytube.jpg" alt="A woman in a black, futuristic dress, looking intensely ahead.">
+                                        <div class="rec-text highlightbox2">
+                                            <h6>Philosophy Tube</h6>
+                                            <p>
+                                                <a href="https://www.youtube.com/@PhilosophyTube">Youtube</a>, <a href="https://nebula.tv/philosophytube">Nebula</a>, <a href="https://www.patreon.com/PhilosophyTube">Patreon</a>
+                                            </p>
+                                            <p>
+                                                Her video essays are jaw-dropping. She's a fantastic creator and explainer. I'm not even sure how to describe her. 
+                                            </p>
+                                            <details>
+                                                <summary><h5>Featured Videos:</h5></summary>
+                                                <!-- Islamophobia: An Analysis | Philosophy Tube -->
+                                                <iframe src="https://www.youtube.com/embed/3S7ypQQIMQk?si=gXAr1QBUeAVaCeVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Vaccines & Freedom | Philosophy Tube -->
+                                                <iframe src="https://www.youtube.com/embed/Va0RCgbywGc?si=XM3-wErF4gSTJ2Xd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Steve Bannon | Philosophy Tube -->
+                                                <iframe src="https://www.youtube.com/embed/wO6uD3c2qMo?si=sn5oQmOnHYM8FGcd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Beauty in Ugly Times | Philosophy Tube -->
+                                                <iframe src="https://www.youtube.com/embed/iilzRF_5EL8?si=x7wgkRDfuGKHxMGd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </details>
+                                        </div>
+                                    </li>
+
+                                    <!-- hbomberguy -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/hbomb.jpg" alt="A man in a banana costume, eating a banana. Behind him, fire is raging.">
+                                        <div class="rec-text highlightbox2">
+                                            <h6>hbomberguy</h6>
+                                            <p>
+                                                <a href="https://www.youtube.com/@hbomberguy">Youtube</a>, <a href="https://nebula.tv/hbomberguy">Nebula</a>, <a href="https://www.patreon.com/Hbomb">Patreon</a>
+                                            </p>
+                                            <p>
+                                                I know him. You know him. All of youtube knows him.<br>
+                                                <br>
+                                                That's because he's one of the best creators on the entire platform.
+                                            </p>
+                                        
+                                            <details>
+                                                <summary><h5>Featured Videos:</h5></summary>
+                                                <!-- Vaccines and Autism: A Measured Response -->
+                                                <iframe src="https://www.youtube.com/embed/8BIcAZxFfrc?si=ePeRDyg3J07b4Um4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Climate Denial: A Measured Response -->
+                                                <iframe src="https://www.youtube.com/embed/RLqXkYrdmjY?si=m0wx7gIswPYeRMp7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Flat Earth: A Measured Response -->
+                                                <iframe src="https://www.youtube.com/embed/2gFsOoKAHZg?si=lU0ivmk6HRsGn1Kb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <!-- Sherlock Is Garbage, And Here's Why -->
+                                                <iframe src="https://www.youtube.com/embed/LkoGBOs5ecM?si=ipvhI9ZPueXKqlbB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </details>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <!-- Variety -->
+                            <details class="highlightbox">
+                                <summary>
+                                    <h5 class="h5-special">Variety</h5>
+                                </summary>
+
+                                <ul class="rec-list">
+    
+                                <!-- Content here! Africa everyday, emmymade, howtocookthat-->
+                                    <!-- Atomic Shrimp -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/atomicshrimp.jpg" alt="A small green shrimp, with red orbiting lines around it, making it appear like an atom.">
+                                        <div class="rec-text highlightbox2">
+                                            <h4>Atomic Shrimp</h4>
+                                            <p>
+                                                <a href="https://www.youtube.com/@AtomicShrimp">YouTube</a>, <a href="https://atomicshrimp.com/">website</a>
+                                            </p>
+
+                                            <p>
+                                                He creates a wide variety of videos - cooking, foraging, trying weird or novel food, tinkering with electronics, woodworking, making clay, cooking challenges on a budget, scambaiting - and many other such things.<br>
+                                                Being a fellow curious human who wants to do a bit of everything, this channel is a treasure of inspiration and serotonin. I guess it's lovely to see there's people like you out there, and who actually managed to start dabbling in a bit of everything, following their own curiosity.
+                                            </p>
+                                        <p>
+                                            Before switching over to youtube, he recorded his miscellaneous projects over a website. There's a quote on that website that I think distilled well the essence of his channel, and that stuck with me over the years:
+                                        </p>
+                                        
+                                        <p>
+                                            <i>"This website is really just about the things I do in my spare time. <span class="purple">My interests include wild food, experimental cooking, assorted crafts, multimedia work and the deliberate, but benign and mild-mannered pursuit of the absurd.</span><br>
+                                            <br>
+                                            Founded a short time after my 40th birthday, the site has been described by some as documentary of my mid-life crisis. Maybe that's not entirely untrue - looking back, it does mark a bit of a turning point, when I <span class="purple">stopped just formulating lists of things I might find interesting to do, and started doing them.<br>
+                                            <br>
+                                            My lists of future projects don't ever seem to get any shorter and most of the items on them are quite trivial, but it means I seldom experience boredom.</span>"</i>
+                                        </p>
+                                        <details>
+                                            <summary><h5>Featured Videos:</h5></summary>
+                                            <p>His content is so variegated that it's hard to pick a selection! He does so many different things!</p>
+                                            <iframe src="https://www.youtube.com/embed/-fLdNDbZ6ec?si=T66_wUiivYfCVgSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/7aShSbFfHXY?si=OQpudgdurkLC5VQ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/gIlYJSO7lok?si=4cwu8DCz7z4MyEXn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe src="https://www.youtube.com/embed/wYBruVj9jt8?si=WmpaQUq0CJViw6yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </details>
+                                    </div>
+                                    </li>
+
+                                    <!-- Africa Everyday -->
+                                    <li>
+                                        <img class="logo" src="images/misc/recs/africaeveryday.jpg" alt="The african continent depicted in orange on a white background.">
+                                        <div class="rec-text highlightbox2">
+                                            <h4>Africa Everyday</h4>
+                                            <p>
+                                                <a href="https://www.youtube.com/@africa_everyday">YouTube</a>, <a href="https://www.patreon.com/Africa_Everyday">Patreon</a>
+                                            </p>
+
+                                            <p>
+                                                A friends of Atomic Shrimp, with whom he collaborates frequently. Mr Babatunde is a Nigerian teacher, who reached out to Shrimp during a hard time in the pandemic for the possibility of a video collaboration. From that cultural exchange a friendship was born, and the viewers were so supportive, they encouraged him to set up a Patreon and a channel of his own!<br>
+                                                The revenue from Patreon helps support him and his neighbors. 
+                                            </p>
+                                            <p>
+                                                He's set in rural Nigeria and, despite the channel name, he of course can only talk about his own experiences. Even then, Nigeria is a big and diverse country, as he often explains himself. For any westerner, it's a fascinating and helpful way to experience one of those cultures that are rarely really shown by the people living them, from the inside.
+                                            </p>
+                                        
+                                            <p>
+                                                He's a lovely guy who makes up for his inexperience in video-making with interesting content, sunny attitude, and some funny disasters in the kitchen. Much like Atomic Shrimp, his videos cover a variety of topic, so there's something for everyone!
+                                            </p>
+                                            <details>
+                                                <summary><h5>Featured Videos:</h5></summary>
+                                                <iframe src="https://www.youtube.com/embed/9XUPoYDMkPc?si=wIPXJAb8Lex0sPLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe src="https://www.youtube.com/embed/gkHUsIsn28A?si=gA1pSJvbCMvzNjP6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe src="https://www.youtube.com/embed/YjY_l7XHJOI?si=lUL-CngkfhD6gGPr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe src="https://www.youtube.com/embed/KySg_rTiNDw?si=imTUMzsgAFTnZz99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </details>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </details>
+
+                        </details>
+                        <!-- Miscellaneous Single Videos -->
+                        <details class="highlightbox2">
+                            <summary>
+                                <h4>Miscellaneous Single Videos</h4>
+                            </summary>
+
+                            <ul class="rec-list" style="padding-left: 0px;">
+                                
+                                <!-- non-euclidean space in first person -->
+                                <li class="highlightbox marginbottom">
+                                    <iframe class="single-video" src="https://www.youtube.com/embed/kEB11PQ9Eo8?si=eC8RN3LjMgXdwkhp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="rec-text">
+                                        <p>
+                                            Getting to experience a non-euclidean space in first person is tremendously cool!
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <!-- Big Joel -->
+                                <li class="highlightbox marginbottom">
+                                    <div class="verticalvideos">
+                                        <!-- The Art of Losing -->
+                                        <iframe class="single-video" src="https://www.youtube.com/embed/4ggOSzMNZwM?si=AgSXak0X6aFFfQNl" title="The Art of Losing - Big Joel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <!-- Fear of Death -->
+                                        <iframe class="single-video" src="https://www.youtube.com/embed/KBWQB0NJXiw?si=_U1f-eB07mk1Oo1G" title="Fear of Death - Big Joel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="rec-text">
+                                        <p>
+                                            Though I generally tend to enjoy Big Joel, these two videos - which are of a kind that is a bit unusual for him - have had a lasting impact on me. I think about these a lot.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <!-- Diamond Jack -->
+                                <li class="highlightbox marginbottom">
+                                    <iframe class="single-video" src="https://www.youtube.com/embed/mRpiBvwKX6c?si=AsCzycvlpQa7JoRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="rec-text">
+                                        <p>
+                                            A short animation that stole my heart. I've been rewatching it periodically for over 5 yrs, and it never fails to catch my breath and fill me with energy and awe. 
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <!-- Patricia Taxxon -->
+                                <li class="highlightbox marginbottom">
+                                    <div class="verticalvideos">
+                                        <!-- Art, Furries, God -->
+                                        <iframe class="single-video" src="https://www.youtube.com/embed/LOGgqym6Nks?si=BaMh7_RoqqsMzGnC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <!-- The Autistic Horror of Don't Hug Me I'm Scared (season 1) -->
+                                        <iframe class="single-video" src="https://www.youtube.com/embed/EZ7cStxqgFE?si=2HJsXrus7JLdadp2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <!-- On the Ethics of Boinking Animal People -->
+                                        <iframe class="single-video" src="https://www.youtube.com/embed/ws9g3igw51s?si=2bUXVmeMmWfnmkXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="rec-text">
+                                        <p>
+                                            I would say that I enjoy Patricia Taxxon's music infinitely more than her video essays - if it were not for this trifecta of video essays that are absolutely fantastic. The last one gets me in tears every time I rewatch it, so you know it's good.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <!-- TempleOS -->
+                                <li class="highlightbox marginbottom">
+                                    <iframe class="single-video" src="https://www.youtube.com/embed/UCgoxQCf5Jg?si=QD19OZaBHWY2C0Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="rec-text" class="highlightbox">
+                                        <p>
+                                            <em>"TempleOS | Down the Rabbit Hole"</em>
+                                        </p>
+                                        <p>
+                                            The interesting yet disturbing tale of a man who created an Operative System from scratch, and believed he could talk to god through it.
+                                        </p>
+                                        <details>
+                                            <summary>
+                                                <h5>Trigger Warnings</h5>
+                                            </summary>
+                                            <p>
+                                                The man in question suffered from pretty severe mental health issues, and I don't rememebr how well the video addresses that. The man also believed some pretty horrible things, and there are clips of him saying disturbing and offensive things.
+                                            </p>
+                                            <p>
+                                                The imagery and music that make up TempleOS can be disturbing or unsettling, and might trigger feelings of "unreality". View at your own discretion!
+                                            </p>
+                                        </details>
+                                        <details>
+                                            <summary>
+                                                <h5>More about TempleOS</h5>
+                                            </summary>
+                                            <p>
+                                                The OS itself is in the public domain, and you can <a href="https://templeos.org/">download it freely here</a>. You can use a Virtual Machine to experience it on your own.
+                                            </p>
+                                            <p>
+                                                There is also an <a href="https://templeosonline.com/">"aesthetic omage"</a> to TempleOS that runs in your browser and gives you a feeling for what it was. Warning, though - I haven't explored it fully, but remember spotting some gory medical images in some pages. Explore at your own risk! Take a look at the trigger warning section above, as well.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </li>
+                            </ul>
+                        </details>
+                    </details>
+
+                    <!-- Software -->
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>Software</h3>
+                        </summary>
+                        <ul class="rec-list">
+
+                            <!-- Joplin -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/joplin.png" alt="A white letter J on a blue background.">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://joplinapp.org/"><h3 style="background-color: rgb(173, 214, 101);">Joplin</h3></a>
+                                    <p>
+                                        <em>"Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device."</em>
+                                    </p>
+                                    <details>
+                                        <summary>
+                                            <h4>Why I love it:</h4>
+                                        </summary>
+                                        <p>
+                                            Joplin is something of a second brain for me. Just as I keep a physical bullet journal for helping me with daily, short-term tasks and reminders, I use Joplin as a sort of "long term memory". Anything I know I want to find again gets stored there, properly tagged and in a notebook that makes sense for me.
+                                        </p>
+                                        <p>
+                                            I also use it as a "notes" app for active projects: it's almost always open while I work on this website for example, as I will write down all my plans and links to things I don't want to forget.
+                                        </p>
+                                        <ul>
+                                            <li>♡ You can set an emoji for each Notebook, which helps me a lot in finding what I'm looking for!</li>
+                                            <li>♡ Cross-platform, and you can keep all of your stuff syncronized by using a service like DropBox. Having access to the same notes at home and on the go seamlessly for free seems almost like it should be illegal, it's so useful!</li>
+                                            <li>♡ You can save entire webpages or just pieces of webpages using a browser extension!</li>
+                                            <li>♡ Tags are useful and easy to use</li>
+                                            <li>♡ Free and open source! (Unless you want cloud storage space directly from them - in that case there's a paid service.)</li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </li>
+
+                            <!-- NAPS2 -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/naps2.png" alt="A scanner">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://www.naps2.com/"><h3 style="background-color: rgb(173, 214, 101);">NAPS2</h3></a>
+                                    <p>
+                                        <em>Not Another PDF Scanner</em><br>
+                                        <em>NAPS2 is free and open source scanning software for Windows, Mac and Linux.</em>
+                                    </p>
+                                    <p>
+                                        A very neat free & open source software for scanning. But the neat thing is - you can also import images or PDFs in there on your own. It then lets you crop, adjust your images, and save your result as PDF or as images. Very handy!
+                                    </p>
+                                    <details>
+                                        <summary>
+                                            <h4>Why I love it:</h4>
+                                        </summary>
+                                        <p>
+                                            Proprietary scanning software are so often filled with bloat and can be confusing to navigate.
+                                        </p>
+                                        <p>
+                                            I also often need to do simple actions with PDFs - such as removing one page, or adding another, or making a PDF out of images. This software lets me do this in a few easy clicks - and I already have it on hand to scan anyways!
+                                        </p>
+                                        <ul>
+                                            <li>♡ I can easily set default settings for when I scan - such as setting the size of the image, or choosing to always adjust brightness and contrast by a certain amount automatically.</li>
+                                            <li>♡ Create PDFs from images in a couple clicks and vice versa</li>
+                                            <li>♡ Automatically detect text from scans with OCR</li>
+                                            <li>♡ Free and open source!</li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </li>
+
+                            <!-- Krita -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/krita.png" alt="A brush painting on a rainbow palette">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://krita.org/"><h3 style="background-color: rgb(173, 214, 101);">Krita</h3></a>
+                                    <p>
+                                        <em>"Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone."</em>
+                                    </p>
+                                    <p>
+                                        Who needs Photoshop these days? Go get Krita! It's now also available in Beta for Android.
+                                    </p>
+                                    <details>
+                                        <summary>
+                                            <h4>Why I love it:</h4>
+                                        </summary>
+                                        <p>
+                                            Photoshop can eat my entire ass.
+                                        </p>
+                                        <p>
+                                            And Clip Studio - I love you but you're on thin fucking ice.
+                                        </p>
+                                        <ul>
+                                            <li>♡♡♡ Free and open source! ♡♡♡</li>
+                                            <li>♡ Has a beta version for Android as of recent! Bit wonky but, did I mention it's free??</li>
+                                            <li>♡ Literally all you need if you're just starting out with digital art, and possibly all you might need after as well.</li>
+                                            <li>♡ The two "Chrome" brushes are the most fun I've ever had with a digital art tool in my life and, because of the nature of Krita's brush engine, I haven't been able to get anything like this anywhere else.</li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </li>
+
+                            <!-- Bitwarden -->
+                            <li>
+                                <img class="logo" style="border-radius: 0;" src="images/misc/recs/bitwarden.png" alt="A stylized white shield on a blue background">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://bitwarden.com/products/personal/"><h3 style="background-color: rgb(173, 214, 101);">Bitwarden</h3></a>
+                                    <p>
+                                        <em>"Bitwarden is a freemium open-source password management service that stores sensitive information, such as website credentials, in an encrypted vault."</em>
+                                    </p>
+                                    <p>
+                                        All my passwords. Everywhere. On every device I own. They auto fill if you use the browser extension or mobile app. It asks if I want to save new login credentials. It has folders I can sort everything in. 
+                                    </p>
+                                    <p>
+                                        <em>All of this for free! For everyone!</em> The "Premium" costs 10$/yr and gives some small perks I think - but it's really just the way it supports being free for everyone else. I personally am a supporter, because it's a service that's worth it and that I'm happy stays free.
+                                    </p>
+                                </div>
+                            </li>
+                            
+                            <!-- Stacher -->
+                            <li>
+                                <img class="logo" style="border-radius: 3px;" src="images/misc/recs/stacher.png" alt="A stylized white shield on a blue background">
+                                <div class="rec-text highlightbox2">
+                                    <a href="https://stacher.io/"><h3 style="background-color: rgb(173, 214, 101);">Stacher</h3></a>
+                                    <p>
+                                        <em>"A Beautiful, Modern GUI for YT-DLP"</em>
+                                    </p>
+
+                                    <p>
+                                        yt-dlp is a powerful command line utility that lets you <em>download video or audio from any Youtube upload (as well as more than 1700 other websites!), in the quality and format you prefer.</em>
+                                    </p>
+                                    
+                                    <details>
+                                        <summary>
+                                            <h4>Why I love it:</h4>
+                                        </summary>
+                                        <p>
+                                            Since command lines can be tricky to navigate, a Graphical User Interface is much appreciated! This one doesn't try to intall any undesired software, and just does its job neatly. It's an one-person hobby project, but works quite flawlessly.
+                                        </p>
+                                        <p>
+                                            I like to archive my favourite's channels or videos. I can just plop in the link to a channel or playlist, and have this neat little utility download it all for me. I'm really grateful to have it around!
+                                        </p>
+                                    </details>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </details>
+
+                    <div style="margin-top: 50vh;"></div>
+                    
+                </div>           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="/load.js"></script>
+    <script src="/music.js"></script>
+
+    
+    <style>
+        .erikapic {
+            max-width: 30vw;
+            border-radius: 3px;
+            border: 5px #008d28;
+            border-style: double;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           
+        }
+
+        .grid-element {
+            padding: 7px;
+            background-color: #dcf58fc5;
+            border-radius: 30px;
+            border: 1.7px #e67700 solid;
+            max-width: fit-content;
+            margin: auto;
+        }
+
+        .grid-element:hover {
+            background-color: #dcf58fc5;
+            border: 3px #e67700 solid;
+            }
+
+            @media screen and (max-width: 600px) { 
+
+                .erikapic {
+                    max-width: 90%;
+                }
+            }
+    </style>
+    
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <p>
+                    I am currently moving.<br>
+                    Moving is very stressful, so I adopted a snail.
+                </p>
+                <img class="erikapic" src="/main-site/images/hobbies/snails/erika2.png" alt="Small snail climbing on a finger and looking curiously ahead. There's a computer in the background.">
+                <p>
+                    Her name is Erika and she's adorable. Are you curious about snails? Would you like to know more about snail-keeping? No? Might I interest you with isopods or vivariums then?
+                </p>
+                <p>
+                    This is a newfound hobby, and so I'm still an absolute beginner at this - and this section is a work in progress. Did I mention that moving is stressful?? Still, I hope you can find something of value here! <br>(Once I finish writing the actually sections. Sorry, I'm a bit in a hurry to publish the site as-is in this very moment, see you soon!)
+                </p>
+                
+                <div class="grid">
+                    
+                    <h2 class="grid-element"><a href="my-critters.html">My Critters</a></h2>
+                    <h2 class="grid-element"><a href="about-snails.html">About Snails (wip)</a></h2>
+                    <h2 class="grid-element"><a href="pet-snails.html">Keeping land snails (wip wip!)</a></h2>
+                    <h2 class="grid-element"> <!-- <a href="isopods.html">-->Keeping Isopods (coming sooner than later!)<!-- </a>--></h2>
+                    <h2 class="grid-element"><!-- <a href="vivariums.html">-->Vivariums (coming later than sooner!)<!-- </a>--></h2> 
+                </div>
+                           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>

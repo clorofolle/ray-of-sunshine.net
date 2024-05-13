@@ -1,0 +1,9 @@
+
+// Changes languages at the press of a button
+
+function toggleLanguage() {
+    var elements = document.querySelectorAll('.eng, .ita');
+    elements.forEach(function(el) {
+        el.classList.toggle('hidden');
+    });
+}

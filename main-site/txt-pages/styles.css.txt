@@ -1,0 +1,507 @@
+
+/* Helps with mobile for some reason?*/
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+/*things that apply on all the page*/
+body {
+    font-family: 'Lora', Arial, Helvetica, sans-serif; /* If possible uses Lora */
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto; /* Scrolls only vertically */
+    
+}
+
+/*Changes mouse pointer*/
+* {                                 
+    cursor: url(/snail.cur), default;
+}
+
+/*Changes mouse pointer to be something else when hovering certain elements. A bit messy*/
+a, a:hover {
+    cursor: url(/1422.cur), pointer;
+}
+
+a img, a:hover img, summary h2, summary h3, summary h4, .petname, .petname h2, .modal-close {
+    cursor: url(/1403.cur), pointer;
+}
+
+/*divs with .ita or .eng classes appear normally, but once they gain the .hidden class, they disappear.*/
+.ita, .eng {
+    display: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* This loads the custom font from files on the server. Use transfonter.org to get woff & woff2 formats. One rule for each custom font */
+/* Main font */
+@font-face {
+    font-family: 'Lora';
+    src: url(/fonts/lora-variablefont_wght-webfont.woff) format('woff'),
+        url(/fonts/lora-variablefont_wght-webfont.woff2) format('woff2');
+    }
+
+/* used in about-me box */
+@font-face {
+    font-family: '000webfont';
+    src: url(/fonts/000webfont.woff2) format('woff2'),
+        url(/fonts/000webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+
+  @font-face {
+    font-family: 'virale';
+    src: url(/fonts/virale.woff2) format('woff2'),
+        url(/fonts/virale.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* placeholder title font */
+@font-face {
+    font-family: 'Yellowtail';
+    src: url('/fonts/Yellowtail-Regular.woff2') format('woff2'),
+        url('/fonts/Yellowtail-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*styles the links in all of the site*/
+body a{
+    text-decoration: none; /* removes the underline from links */
+    color:rgb(39, 113, 105);
+}
+
+/*styles how links behave when you hover your pointer on them*/
+body a:hover{
+    text-decoration: underline; /* puts it back but only on hover! :> */
+    color: darkorange;
+}
+
+/*styles all the header elements as well as the "orange" class, shortcut to keep a constant style*/
+h1, h2, h3, h4, h5, .orange {
+    color: rgb(230, 81, 0);
+}
+
+.purple {
+    color: rgb(118, 81, 159)
+}
+
+.smallerfont {
+    font-size: smaller;
+}
+
+.highlightbox  {
+    background-color: #aed771;
+    border-radius: 10px;
+    padding: 2%;
+    text-align: left;
+}
+
+.highlightbox2  {
+    background-color: #bddf8a;
+    border-radius: 10px;
+    padding: 2%;
+    text-align: left;
+}
+
+/*I use this to style "details" and "summary" elements, which I use often*/
+details h1, details h2, details h3, details h4, details h5, details h6{
+    display: inline;
+}
+
+details {
+    text-align: left;
+}
+summary {
+    text-align: center;
+}
+
+/*Styles the header that gets dynamically loaded*/
+header {
+    width: 70%;
+    height: 8vh; /* 8% of the viewport height */
+    margin: auto; /* centers the object */
+    
+}
+
+header h1 {
+    font-family: 'Yellowtail', 'Lora';
+    font-size: 33px;
+    color: rgb(153, 197, 122);;
+    margin: 0;
+    display: inline;
+}
+
+header img{
+    max-width: 60px; max-height: 85px;
+    z-index: 1;
+    transform: translateZ(50);
+    
+}
+
+.headerbox {
+    display: flex;
+}
+
+.headerbox1 {
+    flex: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.headerbox1 a:hover{
+    color: #bddf8a;
+    text-decoration: underline;
+}
+
+.headerbox2 {
+    flex: 1;
+}
+
+.langbuttoneng, .langbuttonita {
+    width: 84px;
+    height: 25px;
+    transform: scale(0.7);    
+}
+
+.langbuttoneng {
+    background-image: url(/main-site/images/langbuttoneng.png);
+}
+
+.langbuttonita {
+    background-image: url(/main-site/images/langbuttonita.png);
+}
+/*Header styles end here*/
+
+
+
+
+/*I use this class for all divs which I want to scroll, but also to have an invisible or coloured scrollbar.*/
+.hiddenscroll {
+    overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hiddenscroll::-webkit-scrollbar {   
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox. Not actually 100% hidden but tbh it's better this way! */
+.hiddenscroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: #d4f79c #abd46f;
+}
+
+/*"main-container" is the class of the div which contains both the two sidebars and the middle main content box.*/
+/*It's a flex container and ".sidebar-left", ".sidebar-right", and "main" are its flex items.*/
+.main-container {
+    display: flex; /* Let's flex it, baby!! */
+    margin: 1% 4%;
+    font-size: 14.7px; /* yeah i'm sure that's not good practice */
+}
+
+/*Styles the "main" element, the middle div in which each page's actual content is displayed.*/
+main {
+    width: 70vw; /* 70% of the viewport width */
+    height: 80vh; /* !!! Remember, padding is included in this height. Do not add padding in the main divs !!! */
+    overflow-y: auto; /* Scrolls only vertically */
+    margin: auto 2%; /* topbottom leftright */
+}
+
+/* The div that contains the actual stuff written on the page. */
+.content {                  
+    margin: 5%;
+    text-align: center;
+    font-weight: 450;
+}
+
+/* Styles all the boxes with the cute leafy border and green background */
+.greenbox {
+    border: 5px solid transparent; /* Actual, solid border on top of which the image is placed */
+    /*border: 85px solid transparent; */
+    border-image-source: url(navborder250.png); /* Square image 1000px */
+    border-image-slice: 250; /* 1000/4 = 250. Each side is divided in 4 chunks. 2 of those are angles and inner 2s are repeated borders. */
+    border-image-width: 10; /* The bigger it is the bigger the image on the transparent border will be!! Too big and it will conver the contents of the div */
+    border-image-outset: 4 3 2 3; /* top, right, bottom, left. How much the image can extend outside of the div. Yeah idk this just works well with my image. */
+    border-image-repeat: round; /* "round: the image tiles to fill the area, and is rescaled if necessary to avoid dividing tiles." Src: https://css-tricks.com/almanac/properties/b/border-image/ */
+    background-color: rgb(203, 234, 157);
+}
+
+/* Allows a div to have the cute leafy border, without the green background. */
+.border {
+    border: 5px solid transparent; /* Actual, solid border on top of which the image is placed */
+    /*border: 85px solid transparent; */
+    border-image-source: url(navborder250.png); /* Square image 1000px */
+    border-image-slice: 250; /* 1000/4 = 250. Each side is divided in 4 chunks. 2 of those are angles and inner 2s are repeated borders. */
+    border-image-width: 10; /* The bigger it is the bigger the image on the transparent border will be!! Too big and it will conver the contents of the div */
+    border-image-outset: 4 3 2 3; /* top, right, bottom, left. How much the image can extend outside of the div. Yeah idk this just works well with my image. */
+    border-image-repeat: round; /* "round: the image tiles to fill the area, and is rescaled if necessary to avoid dividing tiles." Src: https://css-tricks.com/almanac/properties/b/border-image/ */
+}
+
+
+/*Styles the sidebars. They're both flex items as well as flex containers.*/
+.sidebar-left, .sidebar-right {
+    width: 15vw;
+    height: 85vh; /* !!! Remember, padding is included in this height. Do not add padding in the main divs !!! */
+    overflow: visible; /* auto: Enables scrolling if the content overflows; visible: to help with the border */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */   
+}
+
+/*Styles the actual divs that have the navigation links inside them*/
+.leftbox, .rightbox {
+    flex: 1; /* This allows boxes to grow and fill the space */
+    margin: 5px; /* Optional: for some space between the boxes */    
+}
+
+/*Used in the left navbar that has two separate navigation boxes*/
+.me-box, .you-box {
+    flex-basis: 5%; /* LEFT Sets an initial height for the first 2 boxes */
+    text-align: center;
+}
+
+/*Used in the right navbar*/
+.us-box {
+    flex-basis: 30%; /* RIGHT Sets an initial height for first box */
+    text-align: center;
+}
+
+/*This is used for the dolls and trinkets below the navigation boxes. They are inside flexbox items and are set to only take up the remaining space.*/
+.miscleftbox, .miscrightbox {
+    flex-grow: 1; /* This box will grow to take up remaining space */
+}
+
+/*For images that need to overlap with the object on top of them. Used in the "miscellaneous" trinkets in the navbars*/
+.imgoverlay {
+    margin-top: -30px;
+}
+
+/*Styles the text inside the navbar boxes*/
+.navbartitle {
+    margin: 10% 0 0 0;
+    font-size: 14px;
+    color: rgb(87, 45, 134);
+    font-weight: 333;
+}
+
+.navbartext {
+    margin: 5% 0 3% 0;
+    font-size: 13px;
+}
+
+.navbartext a {   /* So the links in the navbars stack vertically */
+    display: block;
+    
+}
+
+/* Styles the footer, which is loaded dynamically */
+.footer {
+    flex-basis: 1%;
+    background-color: rgb(203, 234, 157);
+    border-radius: 33px;
+    margin: 7% 20% auto; /* top right-left bottom */
+    text-align: center;
+    padding: 0.5%;
+}
+
+
+
+/*For the cookbook pages*/
+.food-icon {
+    width: 20px;
+}
+
+
+
+
+
+
+/* For Playlists - Music */
+
+/* Makes the default audio player thingy green. For some godforsaken reason (hint: it's the hue rotation) */
+audio {
+    filter: sepia(100%) saturate(70%) brightness(420%) contrast(599%) hue-rotate(60deg) invert(12%);
+    width: 200px;
+    height: 25px;
+    border-radius: 33px;
+    
+}
+
+/* Song lists */
+#playlist {
+    list-style: none;
+    margin: auto;
+    padding: 0px;    
+}
+
+/* .playlist is a class and different from #playlist which is an ID.
+This one styles the div everything is nested into */
+.playlist {
+    padding: 15px 0px;
+    margin: auto 27%;
+    background-color: rgba(137, 225, 119, 0.3);
+    border-radius: 23px;
+    border-style: groove;
+    border-color: rgb(102, 208, 115);
+    font-size: smaller;    
+}
+
+/* Songs not active in the list */
+#playlist li a {
+    color: rgb(8, 131, 102);
+    text-decoration: none;
+    padding: 0.7%;
+    background-color: rgb(131, 198, 192, 50%);
+    border-radius: 33px;
+}
+
+/* Active song */
+#playlist .active a {
+    color: rgb(207, 72, 0);
+    font-weight: bold;
+    text-decoration: double underline;
+    padding: 0.7%;
+    background-color: rgb(250, 188, 73);
+    border-radius: 33px;
+}
+
+/* So they don't overlap */
+#playlist li{
+    margin: 5px;
+}
+
+/* END of Playlists - Music */
+
+
+.itaring {  /*that damn little box keeps misbehaving on small screens */
+    display: flex; 
+    flex-direction: column; 
+    gap: 1px; 
+    width: 96px; 
+    margin: 1em auto;
+}
+
+
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 700px) {
+    main {
+        width: 80vw; /* On small screens, take up more width */
+        height: auto; /* Height becomes auto to accommodate content */
+    }
+    .imgoverlay {
+        margin-top: -5px;
+     
+    }
+
+    .main-container {
+        flex-direction: column;
+        max-width: 100vw;
+        margin: auto;
+    }
+
+    .sidebar-left, .sidebar-right {
+        height: auto;
+    }
+    
+    .sidebar-left {
+        order: 1;
+        width: 100%;
+        margin: auto;
+        
+    }
+    
+    .sidebar-right {
+        order: 2;
+        width: 100%;
+    }
+
+    .navbartitle{
+        margin: auto;
+        padding: 1% auto;
+        padding-top: 2%;
+    }
+
+    .navbartext {
+        margin: auto;
+        padding-bottom: 5%;
+    }
+    
+    .navbartext a {
+        display: inline-block;
+        /* or 'inline' depending on your desired spacing and layout */
+    }
+    
+    .miscleftbox {  /*loro si comportano BENISSIMO*/
+        width: 100px;
+        margin-top: -20px;
+        margin-bottom: -25px;
+        z-index: 1;
+    }
+
+    .miscrightbox {  /*loro invece NO*/
+        max-width: 400px;
+        margin-top: -20px;
+        margin-bottom: -25px;
+        z-index: 1;
+                
+    }
+
+    .stacce { /*non ne posso più*/
+        max-width: 70px;
+        max-height: 50px;
+    }
+
+    .stacceCRISTO { /*mo ho un crollo nervoso*/
+        max-width: 23.3px;
+        max-height: 50px;
+    }
+
+    .itaring {
+        display: inline flex;
+        flex-direction: column;
+        gap: 1px;
+        width: 96px;
+        margin: 0px;
+        margin-bottom: 1em;
+        transform: translateY(-15px) /*PORCODIO SALI SOPRA*/
+    }
+
+    main {
+        order: 3;
+        width: auto;
+        max-width: 600px;
+        margin: auto;
+    
+
+    }
+
+    .footer {
+        
+        max-width: 600px;
+        margin: auto;
+        margin-top: 3em;
+    }
+
+    .header {
+        margin: auto 1%;
+    }
+
+  
+
+   
+}
+

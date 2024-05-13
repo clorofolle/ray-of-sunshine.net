@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Essential to show Unicode characters -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Essential for the webpage to be responsive on mobile -->
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" > <!-- Icon that shows up in the browser! -->
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="/load.js"></script>  <!-- Loads header, sidebars, footer. Also has the code that allows for language switching. The slash at the start of the pathname makes it an absolute path: it will always look for said file starting from root folder. Without a slash it would be a relative path, starting instead from the location of current .html file -->
+    <script src="/main-site/music.js"></script> <!-- Used for playlists, not in use here atm -->
+
+   
+
+    <style>
+    /*Most of CSS is loaded externally, but I keep some internal CSS for things that only appear on certain pages.*/
+
+        body {
+            background-image: url(bg-small.jpg);
+        }
+
+        /*For the little scrolling update on the middle of the page!*/
+        .newsbox2 {
+            border: 2px #008d28;
+            border-style: groove none double none;
+            background-color: rgb(174, 215, 113, 50%);
+            font-size: small;
+            text-align: center;
+            color: darkgreen;
+            border-radius: 10px; /* smooth corners */
+            padding: 10px;
+            margin: auto;
+            margin-top: 4vh;
+            max-width: 40vw;
+            max-height: 300px;
+            overflow-y: auto; /* Scrolls only vertically */
+        }
+
+        /*The bottom half of this page is a mess and the footer ends up overlapping some of it. This puts it back in its place :-)*/
+        .footer {
+            margin-top: 20vh;
+        }
+
+        /*The main div for the extra section that only appears on index. It's a flex container.*/
+        .homepage-extras {
+            width: 90vw;
+            height: 85vh; /* !!! Remember, padding is included in this height. Do not add padding in the main divs !!! */
+            margin: 1% auto auto auto; /* top, right, bottom left*/
+            display: flex; /* let's get the magic going */
+            flex-direction: column; /* This is to flex vertically! */
+        }
+
+        /*Class applied to the flex-items nested inside .homepage-extras*/
+        .homebox {
+            flex: 1; /* This allows boxes to grow and fill the space */
+            margin: 0.1%; /* Optional: for some space between the boxes */
+    
+        }
+
+        /* A: Upper section of homepage-extras. It's both a flex item and flex container. */
+        .homeboxtop {
+            flex-basis: 30%;
+            display: flex;
+            margin-top: 3vh;
+            margin-bottom: 10vh;
+        }
+
+        /* A1: flex item of .homeboxtop. Used to display external media (music, videos) */
+        .mediabox {
+            flex-basis: 30%;
+            margin: 0px 10px;
+            max-width: fit-content;  /*used for bandcamp*/
+            /*max-width: 100%;    used for youtube */
+        }
+
+        /* A2: flex item of .homeboxtop. News & Updates */
+        .newsbox {
+            border: 4px #008d28;
+            border-style: groove none double none;
+            flex-basis: 40%;
+            background-color: rgb(203, 234, 157, 90%);
+            font-size: small;
+            text-align: center;
+            color: darkgreen;
+            border-radius: 10px; /* smooth corners */
+            padding: 10px;
+            margin: 0px 20px;
+            max-height: 270px; /* Otherwise the flexbox just absolutely flexes, change if you change the bandcamp */
+            overflow-y: auto; /* Scrolls only vertically */
+        }
+
+        .newsbox a{
+            text-decoration: underline;
+        }
+
+        .newselement {
+            padding: 5px; 
+            background-color:rgb(203, 234, 157);
+            margin: 3px;
+            border-radius: 3px;
+        }
+
+        /* A3: flex item of .homeboxtop. Showcase a personal picture or whatever else I feel like sharing. */
+        .imagebox {
+            flex-basis: 30%;
+            max-width: 60%;
+            margin: 0px 10px;
+            height: fit-content;
+        }
+
+        /* B: lower section of homepage-extras. It's both a flex item and flex container. */
+        .homeboxmid {
+            flex-basis: 60%;
+            display: flex;
+            margin-top: -5vh;
+        }
+
+        /* B1: flex item of .homeboxmid. Webring & Affiliates */
+        .webringbox {
+            flex-basis: 50%;
+        }
+
+        /* B2: flex item of .homeboxmid. Chat box */
+        .chatbox {
+            flex-basis: 50%;
+        }
+
+        /* Styles the webrings without a dedicated graphic */
+        .rounded {
+            text-align: center;
+            color: rgb(232, 132, 45);
+            background-color: rgb(203, 234, 157);
+            border-radius: 33px;
+            margin: auto 9%;
+        }
+
+        .rounded2 {
+            text-align: center;
+            font-size: 80%;
+            background-color: rgb(203, 234, 157);
+            border-radius: 33px;
+            margin: auto 10%;
+        }
+
+        .rounded2shade {
+            background-color: rgb(203, 234, 157, 50%);
+            border-radius: 23px;
+            margin: 1% 33%;
+        }
+
+        /*Makes the webrings without a graphic sit next eachother*/
+        .textwebrings {   
+            display: flex;
+            max-width: inherit;
+        }
+        .textwebrings .rounded2shade {
+            flex: 1;
+            margin: 3%;
+        }
+
+         /*The links in the text webrings stack vertically without using line breaks*/
+        .rounded2 a{               
+            display: block;
+        }
+
+        .imagebox {
+            max-height: 300px;
+            height: fit-content;
+            width: fit-content;
+        }
+
+
+        /*This is here to keep the extra sections on this page responsive on mobile! It's a bit chaotic but I eyeball it.*/
+        @media screen and (max-width: 600px) {  
+            
+            body {
+                overflow-y: scroll;
+                background-size: cover;
+                background-repeat: repeat-y;
+            }
+
+            /*Without this it's super weird*/
+            .homepage-extras {
+                height: fit-content;
+            }
+
+            /*Stacks the flex items vertically instead of horizontally*/
+            .homeboxtop {
+                flex-direction: column;
+                margin: auto;
+                padding: 5%;
+            }
+
+            .mediabox {
+                order: 1;
+                margin: auto;
+                margin-bottom: 5vh;
+                width: fit-content; /* change if you don't techdog */
+                height: fit-content;
+                min-height: 40vh;
+            }
+
+            .newsbox {
+                order: 2;
+                min-height: 20vh;
+                margin-bottom: 5vh;
+                
+            }
+
+            .imagebox {
+                order: 3;
+                margin: auto;
+                margin-bottom: 5vh;
+                max-width: 80vw;
+                height: fit-content;
+                width: fit-content;
+            }
+
+            /*Stacks the flex items vertically instead of horizontally*/
+            .homeboxmid {
+                flex-direction: column;
+                margin: auto;
+            }
+
+            .webringbox {
+                order: 1;
+                margin-top: -45px;
+                transform: scale(.9); /*makes everything a lil smaller*/
+                margin-bottom: 5vh;
+            }
+            
+            .chatbox {
+                order: 2;
+                flex-basis: 500px;
+                width: 90vw;
+            }
+
+            /*footer can have a lil less margin top here :-) as a treat*/
+            .footer {
+                margin-top: 1vh;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+                <span class="ita hidden" style="font-weight: bolder;">La traduzione italiana è ancora un grande work in progress ed è al momento attiva solo su alcune pagine!</span>
+
+                <div style="text-align: center;"> <img style="max-width: 200px;" src="/main-site/images/decorations/Unicorn3b.gif" alt="Galloping Unicorn"></div>
+
+                
+                
+                Hello, and welcome to my little corner of the web! My name is Ray, but also Annalisa or Anna. I'm a person from Italy with too many passions to count and too much enthusiasm to keep inside. Among all these little passions there is a lot of love for personal blogs and websites - a neighborhood of windows to peek in, each window showcasing something dear to a certain person. This is my little window - <a href="https://maggieappleton.com/garden-history">like a garden</a>, I curate it, rearrange every page and icon just for the sake of doing so.<br> 
+                I hope you can find something interesting, or fascinating, or pretty - something consistent that you <a href="/main-site/share-and-enjoy.html">can take home with you</a> - or even just <a href="/main-site/betterweb.html">a novel perspective</a> on the internet!
+                <br>
+
+                <div class="newsbox2 hiddenscroll">
+                    If you've visited this site in the past, you might've noticed things have changed around here! :D
+                    <br>
+                    I've been meaning to re-do this site from scratch for a while, and now I feel like I have enough new changes to show for it.
+                    <br><br>
+                    For one, the code was a complete mess, and adding anything to it was always a challenge. <br>
+                    I've tried my best to keep things nice and clean now. Feel free to snoop around and grab any of the code from this site!
+                    <br><br>
+                    I also have been thinking about what this online space means to me. I would like for this to be a place that does not exist just for myself, but rather something that could be of value for someone else as well.
+                    <br><br>
+                    In any case - for now, welcome to my digital cozy place! Make yourself at home, and feel free to look around. Stay a while, won't you?
+                </div>
+                           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <!-- Only on homepage -->
+    <div class="homepage-extras">
+        <!-- A First vertical flex item and container -->
+        <div class="homebox homeboxtop">
+
+            <!-- A1 1st horizontal flex item -->
+            <!-- External Music/Video showcase -->
+            <!-- for bandcamp, add: style="transform: scale(0.8); transform-origin: top;" -->
+
+            <div class="mediabox border" style="transform: scale(0.8); transform-origin: top;">    
+            <!-- YOUTUBE EMBED - not in use rn    
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QV2oTxX2oZc?si=4k4zJ6kYzp4It2kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            -->    
+                
+                <iframe style="border: 0; width: 100%; height: 410px;" src="https://bandcamp.com/EmbeddedPlayer/album=3328171307/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/transparent=true/" seamless><a href="https://patriciataxxon.bandcamp.com/album/techdog-2">TECHDOG 2 by Patricia Taxxon</a></iframe>
+                
+            </div>
+            
+            <!-- A2 2nd horizontal flex item -->
+            <!-- NEWS & UPDATES -->
+            <div class="newsbox hiddenscroll">
+                    <h2 style="font-size: small; display: inline; color: darkgreen;">    
+                        ✦News & Updates✦<br>
+                    </h2>
+                    <p class="newselement">
+                        ☀ <i class="orange">10/05/2024:</i> 🞜 Switched over to <a href="https://nekoweb.org/">nekoweb</a> for web hosting for the time being. No big reason - I just enjoy seeing some more options, it looks like it's being actively worked on by a team of passionate people, and it's cheaper. Clear your cache if you've been here in the past!<br>
+                        The <a href="https://neocities.org/site/ray-of-sunshine">Neocities profile</a> isn't going anywhere, though the site on there (ray-of-sunshine.neocities.org) will always redirect to ray-of-sunshine.net, no matter where it's being hosted!<br>
+                        🞜 Added a <a href="/main-site/recs.html">recommendations</a> page, and wrote something about <a href="/main-site/hobbies/critters/critters.html">keeping snails</a>.<br>
+                        Currently sharing <a href="https://patriciataxxon.bandcamp.com/album/techdog-2">TECHDOG 2</a> and <a href="/main-site/images/hobbies/snails/erika2.png">a picture of my little snail Erika</a> on homepage.
+                    </p>
+                    <p class="newselement">
+                        ☀ <i class="orange">09/04/2024:</i> Added some more buttons and some small fixes. Currently sharing <a href="https://youtu.be/QV2oTxX2oZc">Vi Hart's "Totality"</a> video and <a href="/main-site/images/temp/fragola2.jpg">a picture of Fragola</a> on homepage.
+                    </p>
+                    <p class="newselement">
+                        ☀ <i class="orange">31/03/2024:</i> Happy Easter! Currently sharing the <a href="/main-site/cookbook/pastiera.html">Pastiera recipe</a> and <a href="https://patriciataxxon.bandcamp.com/album/techdog-3">TECHDOG 3</a> on homepage. Added a couple more cursors for when you hover on hyperlinks, some decorations, and tried to improve readability thanks to <a href="https://solaria.neocities.org/guides">Solaria's Accessibility Guides</a>. Life has otherwise been overwhelming, and I didn't get much of anything done.
+                    </p>
+                    <p class="newselement">
+                        ☀ <i class="orange">22/03/2024:</i> Small fixes here and there.
+                    </p>
+                    <p class="newselement">
+                        ☀ <i class="orange">20/03/2024:</i> site just got a rehaul! :D Happy first day of spring! On homepage: <a href="https://patriciataxxon.bandcamp.com/album/techdog-1">TECHDOG 1</a> and <a href="/main-site/images/my-photos/ageroladog2021.4.jpg">a dog friend</a>.
+                    </p> 
+                    <br><br>
+                    <details>
+                        <summary class="newselement" style="font-size: x-small;">Old Updates/Log</summary>
+                        ✦ <i class="orange">03/11/2022</i> Joined the Yesterweb Ring! Made the index page scrollable since I need to keep this webring in there to have it work. I hope this is visible / clear enough like this, otherwise I'll put it at the top of the page!
+                        <br>✦ <i class="orange">06/10/2022</i> Added a "links" section with links to other sites, an "hoard" section to store graphics in, and I joined/applied for a few webrings. Still figuring out where to keep all the webrings eventually - Ideally I'd like to keep them on the sidebars, but I'm running out of space. I can make my frontpage longer like all the other pages, but idk I feel a little sad that the background won't show as much anymore on the landing page. I guess we'll see!
+                        <br>✦ <i class="orange">05/10/2022</i> Added a blog section. Something happened that made me need to write again, and now I've taken a liking to it. Updates there will be slow, and stuff in there might get a bit corny. Please don't bully me for it. :') I have a couple other things I want to write for now, and it's a good opportunity for me to practice writing in English!                                    
+                        <br>✦ <i class="orange">13/09/2022</i> Got added in the italian webring! :D added it to my page, still trying to get it to work on index.html. Removed chat from the side (sad but it was virtually unusable), and put it in <a href="/chat.html">its own page</a>. Will put more trinkets in its place!<br>
+                        Also created a button to link back to me. I want to make more, but struggle with readability.
+                        <br>✦ <i class="orange">12/09/2022</i> - Tried to fix some css stuff that made the site especially weird to look at. Now the chatbox shouldn't almost clip into the main center content, hooray!<br>
+                        Added links to sadgrl, yesterweb, neocities and firefox on the footer.<br> Added a "plants" page.<br>Added (optional) music.</p>
+                        <p><b class="orange">✦To do✦</b><br>
+                         ✦ Write the pages to go in the "plants" section! And find a way to display a gallery.<br>
+                         ✦ Having figured out a way to have a gallery, finally add galleries to the "art" section.<br>
+                         ✦ Translate everything into italian as well. Figure out a way to have a bilingual site! Maybe just make a duplicate of everything? :(<br>
+                         ✦ Actually talk to people too!!!<br>
+                         ✦ Oh right! The freeware section<br>
+                         ✦ Undertale shrineee but its gonna be a big project since I never know how to compromise<br>
+                         ✦ Next blog post spoilers: the unexpected beauty of being an artisan rather than an artist, and progressive cyberbullying<br>
+                         ✦ A section for song lyrics I translate. I really like to translate song lyrics in my spare time sometimes. I'm not good but I really love it.<br></p>
+                    </details> 
+                    
+           
+            </div> 
+
+            <!-- A3 3rd horizontal flex item -->
+            <!-- Personal Image / Media showcase
+            object-fit: cover; -->
+            <div class="imagebox border">
+                <a href="main-site/hobbies/critters/critters.html">
+                <img style="width: 100%;" src="/main-site/images/hobbies/snails/erika2.png" alt="Small snail climbing on a finger and looking curiously ahead. There's a computer in the background.">
+                </a>
+                
+            </div> 
+        </div>
+
+        <!-- B Second vertical flex item and container -->
+        <div class="homebox homeboxmid">
+
+            <!-- !!WEBRINGS!! B1 1st horizontal flex item -->
+            <div class="webringbox">    
+                <div class="rounded2shade">
+                <div class="rounded">
+                    <h2 style="font-size: large;">Webrings & Affiliates</h2>
+                </div>
+                </div>
+                    <!-- ITALIAN WEBRING -->
+                    <div style="display: flex; flex-direction: column; gap: 1px; width: 96px; margin: 1em auto;">
+                    <a href="https://itawebring.altervista.org/" target="_blank"><img src="https://itawebring.altervista.org/buttons/ITA_1.png" alt="Italian Webring" style="image-rendering: pixelated"></a>
+                        <span style="display: flex;">
+                    <a href="https://itawebring.altervista.org/anello?d=prev&url=https://ray-of-sunshine.net" target="_blank"><img src="https://itawebring.altervista.org/buttons/left.png" alt="Previous" style="image-rendering: pixelated"></a>
+                    <a href="https://itawebring.altervista.org/anello?d=rand" target="_blank"><img src="https://itawebring.altervista.org/buttons/random.png" alt="Random" style="image-rendering: pixelated"></a>
+                    <a href="https://itawebring.altervista.org/anello?d=next&url=https://ray-of-sunshine.net" target="_blank"><img src="https://itawebring.altervista.org/buttons/right.png" alt="Next" style="image-rendering: pixelated"></a>
+                        </span>
+                    </div>
+                    <!-- Hotline Webring -->
+                <div class="textwebrings">
+                    <div class="rounded2shade">
+                    <div class="rounded2">
+                        <a style="color: rgb(245, 130, 130); text-shadow: 0px 0px 1px rgb(151, 84, 84), 1px 1px 2px white;" href="https://hotlinewebring.club/ray-of-sunshine/previous">« Previous</a>
+                        <a style="color: rgb(255, 241, 242); text-shadow: 1px 1px 5px rgb(161, 31, 70);" href="https://hotlinewebring.club/">Hotline Webring</a>
+                        <a style="color: rgb(245, 130, 130); text-shadow: 0px 0px 1px rgb(151, 84, 84), 1px 1px 2px white;" href="https://hotlinewebring.club/ray-of-sunshine/next">Next »</a>
+                    </div>
+                    </div>
+                     
+                    <!-- Retronaut Webring -->
+                    <div class="rounded2shade">
+                    <div class="rounded2">
+                        <a style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px white, 1px 1px 5px white;" href='https://webring.dinhe.net/prev/https://ray-of-sunshine.net/links.html'>« Previous</a>
+                        <a style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px white, 1px 1px 5px white;" href="https://webring.dinhe.net/">Retronaut Webring</a>
+                        <a style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px white, 1px 1px 5px white;" href='https://webring.dinhe.net/next/https://ray-of-sunshine.net/links.html'>Next  »</a>
+                    </div>
+                    </div>
+                </div>    
+                    <br>
+                    <div style="text-align: center;">
+                        <a href="https://solaria.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/solaria.gif" alt="Solaria"></a>
+                        <a href="https://foreverliketh.is/"><img style="margin-right: 7px;" src="/main-site/images/buttons/foreverliketh.is.png" alt="Forever like this"></a>
+                        <a href="https://divergentrays.com/ "><img style="margin-right: 7px;" src="/main-site/images/buttons/divergentrays.png" alt="Divergent Rays"></a>
+                        <br><br>
+                        <a href="https://jamestalon.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/jamestalon.png" alt="James Talon"></a>
+                        <a href="https://fragmentedsand.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/fragmentedsand.png" alt="Fragmented Sand"></a> 
+                        <a href="https://www.valycenegative.it/"><img style="margin-right: 7px;" src="/main-site/images/buttons/valycenegative.png" alt="Valyce Negative"></a>
+                        <a href="https://sugarblush.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/sugarblush-button.png" alt="Sugar Blush"></a>
+                        
+                    </div>
+                </div>
+
+            <!-- !!CHAT!! B2 2nd horizontal flex item -->
+            <div class="chatbox greenbox">
+             <iframe src="https://www5.cbox.ws/box/?boxid=933465&boxtag=CK42tS" width=100% height=100% allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+            </div> 
+        </div>
+    </div>
+    <br>
+    <br>
+    <br><!-- suuuper bad practice but idk what's going on here!!! Why won't the footer sit still -->
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+</body>
+</html>

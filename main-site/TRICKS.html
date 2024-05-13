@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="/load.js"></script>
+    <script src="/music.js"></script>
+    
+    <style>
+        /* Image Overlay on Hover */
+        .image-container {
+            position: relative;
+            width: 200px;
+        }
+
+        .image-container .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(111, 229, 117, 0.5);
+            overflow: hidden;
+            width: 100%;
+            height: 20px;
+            transition: .5s ease;
+        }
+
+        .image-container:hover .overlay {
+            height: 50%;
+        }
+         /* Image Overlay on Hover end */
+
+         /* Animated Loading Spinner */
+
+         .spinner {
+            border: 4px solid rgba(0,0,0,.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: rgb(8, 169, 11);
+            animation: spin 1s ease infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+}
+
+         /* Animated Loading Spinner end */
+
+        /* CSS Dropdown Menu */
+
+        .dropdown-menu ul {
+	        list-style: none;
+	        padding: 0;
+	        margin: 0;
+        }
+        
+        .dropdown-menu ul li {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-menu li ul {
+	display: none;
+	position: absolute;
+}
+
+.dropdown-menu li:hover ul {
+	display: block;
+}
+        
+
+        /* CSS Dropdown Menu end */
+
+
+    </style>
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <!-- Image Overlay on Hover -->
+                <div class="image-container">
+                    <img src="/main-site/images/my-art/pixel/Raygif.gif" alt="Description">
+                    <div class="overlay">More Info</div>
+                </div>
+                <br><br>
+                <!-- Animated Loading Spinner -->
+                <div class="spinner"></div>
+                
+                <!-- CSS Dropdown Menu -->
+                <nav class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Menu</a>
+                            <ul>
+                                <li><a href="#">Submenu 1</a></li>
+                                <li><a href="#">Submenu 2</a></li>
+                                <li><a href="#">Submenu 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+
+                           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="/load.js"></script>
+    <script src="/nutshell.js"></script>
+
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
+
+
+    
+    <style>
+
+        .nutshell-bubble-overflow-section em, .nutshell-bubble-overflow-section span {
+            color: #76519f;
+        }
+
+        main {
+            height: 85vh;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        summary {
+            margin-bottom: 3vh;
+        }
+
+        details {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 3vh;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .pic {
+            max-width: 30vw;
+            border-radius: 3px;
+        }
+
+        .smallpic {
+            max-width: 20vw;
+            border-radius: 33px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border-radius: 33px;
+            margin-right: 3vw;
+            transition: 0.8s ease-in-out; /* you need to put this in whole element instead of hover, so that after you hover it can go back in place smoothly! */
+        }
+
+        .icon:hover {
+            transform: rotate(33deg);
+            
+            
+        }
+
+        .title {
+            transition: 0.2s ease-in-out;
+            padding-top: 4%;
+        }
+
+        .title:hover {
+            text-shadow: 0px 0px 2px #ffdd7f, 0px 0px 5px #ffcb3d, 0px 0px 5px #ffdd7f;
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 33px;
+            transition: transform 0.3s ease;  /* So the zoom in isn't too violent lol */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);  /* Zooms in a bit on hover */
+        }
+        .gallery img:active {
+            transform: scale(2);  /* Zooms in A LOT when clicked on */
+        }
+
+        /* To negate the usual effect while hovering links using Nutshell */
+        .nutshell:hover {       
+            text-decoration: none;
+        }
+        
+
+            @media screen and (max-width: 600px) { 
+
+                .pic, .smallpic {
+                    max-width: 90%;
+                }
+
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                
+            }
+    </style>
+    
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="critters.html">⪦ Back</a></button>
+                </div>
+
+                <h2>
+                    The critters in my home
+                </h2>
+
+                <p>
+                    Click on a critter to expand their section, and click and hold on an image to zoom it.
+                </p>
+                <p>
+                    This page uses <a href="https://ncase.me/nutshell/">Nutshell!</a> <a class="nutshell" href="#nutshells!">:try clicking on sentences underlined with dots, like this one!</a></a>
+                </p>
+                
+                <br>
+                
+                <!-- Erika -->
+                <details class="highlightbox">
+                    <summary class="flex">
+                        <img class="icon" src="/main-site/images/hobbies/snails/erikabucket2.jpg" alt="A little snails peeking over a bucket.">
+                        <div class="title">
+                            <h3>Erika</h3>
+                            <p><em>Cantareus apertus</em></p>
+                        </div>
+                    </summary>
+
+                    <p>
+                        I've wanted to keep a pet snail for quite a while - and then the gods of fresh produce <em>(read: local greengrocers)</em> graced me with a lettuce with a free embedded snail inside! Snails are hardy creatures, and <a class="nutshell" href="#shesnail">:she</a> didn't seem too bothered from having spent a few days in the fridge - so of course I had to adopt her.
+                    </p>
+
+                    <p>
+                        I noticed her coloration was different to what I'm used to. That's because she's no common <em>garden snail</em>, she's a <em><strong>green</strong> garden snail</em>!
+                    </p>
+                    <p>
+                        The common garden snail is also called <em>Cornu aspersum</em>. This little girlie here, instead, is a <em class="purple">Cantareus apertus</em>. <a href="https://www.onezoom.org/life/@Cantareus=2879971?otthome=%40Cantareus%3D2879971#x1642,y-15,w1.5797" target="_blank">This is where she is on the big tree of life</a> - as you can see, the two are more like cousins rather than siblings, which is pretty fascinating.<br>
+                    </p>
+                    <p>
+                        They owe their genus name <em>Cantareus</em> by the fact that they are... singers! It roughly means "singer" in latin <span style="font-size: xx-small;">don't @ me if you studied latin, I will never remember my declinations</span>. This is because <span class="purple">they <a class="nutshell" href="https://www.youtube.com/watch?v=CWOhZWLkd4o">:make a very unique sound when bothered!</a></span> I've been caught completely off guard by that.
+                    </p>
+                    <p>
+                        She's lovely: curious, inquisitive, bold, goofy. I just wish I'd researched more about her species before falling in love with her: apparently we share the common trait of being serial sleepygirls. Cantareus apertus seem to sleep for most of the year! She's now <a class="nutshell" href="#aestivation">:aestivating</a> buried deep in the soil of the tank I finally finished setting up for her. I miss her, but hope to see her back in the fall!
+                    </p>
+
+                    <div style="text-align: center;">
+                        <video class="smallpic" controls><source src="/main-site/images/hobbies/snails/erika_om_nom_nom.mp4" type="video/mp4"> </video>
+                    </div>
+
+                    <div class="gallery">
+
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/ericavscabbage.jpg" alt="A snail curled over some broccoli, munching on them.">
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/ericavscabbage2.jpg" alt="A little snail completely absorbed into eating broccoli.">
+
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erikabucket.jpg" alt="A little snails peeking over a bucket.">
+                        <img class="pic" src="/main-site/images/hobbies/snails/erika2.png" alt="Small snail climbing on a finger and looking curiously ahead. There's a computer in the background.">
+                        
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erika1.jpg" alt="A snail with a rich brown shell, partially retracted into their shell.">
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erika3.jpg" alt="A snail peeking out of their shell.">
+
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erika4.jpg" alt="A snail exploring a human finger!">
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erika5.jpg" alt="A snail exploring a human finger!"">
+                        
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erikalooong.jpg" alt="A snail stretching to climb a branch over them.">
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/erikavsartichoke.jpg" alt="A snail from behind, holding onto a plastic flower pot while munching on an artichoke leaf.">
+                        
+                    </div>
+                    
+                </details>
+
+                <!-- The Tiny Twins -->
+                <details class="highlightbox">
+                    <summary class="flex">
+                        <img class="icon" src="/main-site/images/hobbies/snails/tinytsmall.jpg" alt="A very tiny green snail with an elongated brown shell, sitting on a colorful plate.">
+                        <div class="title">
+                            <h3>The Tiny Twins</h3>
+                            <p><em>Ferussacia folliculum (probably?)</em></p>
+                        </div>
+                    </summary>
+
+                    <p>
+                        I found these two tiny creatures while hunting for woodlice in my potted plants. I thought they were babies, but a kind discord user identified them as a <em>Ferrusacia</em> species. These little things are quite common in mediterranean countries, and they stay as small as a fingernail!<br>
+                        There's not much info out there about them - all I can say is that they're fast and cunning escape artists!
+                    </p>
+
+                    <div class="gallery">
+                        <img src="/main-site/images/hobbies/snails/tinyt1.jpg" alt="A tiny snail walking on dirt.">
+                        <img src="/main-site/images/hobbies/snails/tinyt2.jpg" alt="Two very tiny snails with a ruler besides them, showing them measuring about one centimeter in lenght.">
+                        <img src="/main-site/images/hobbies/snails/tinyt3.jpg" alt="A very tiny green snail with an elongated brown shell, sitting on a colorful plate.">
+                    </div>
+
+                    <p>
+                        Bonus: I also found an equally tiny slug in their enclosure! It's an elusive creature that is usually mimetized in the moss, so I didn't notice it at first. No idea what species it might be! 
+                    </p>
+                    <img class="smallpic" src="/main-site/images/hobbies/snails/tinymysteryslug.jpg">
+                </details>
+
+                <!-- Isopods -->
+                <details class="highlightbox">
+                    <summary class="flex">
+                        <img class="icon" src="/main-site/images/hobbies/snails/isopod4big.jpg" alt="A black isopod resting on a human hand.">
+                        <div class="title">
+                            <h3>The Isopods</h3>
+                            <p><em>Porcellio Scaber "Lava" morph</em></p>
+                        </div>
+                    </summary>
+
+                    <p>
+                        Very goofy yet carismatic crustaceans! They are a joy to watch scurry around doing their little crustacean things - and are really hard to get a good pic of, as they're either moving about, or hidden under something.
+                    </p>
+                    <p>
+                        A natural variation of P. Scaber is <em>calico</em> - they will sometimes have orange/brownish and black spots all over their body. Someone then started selecting for clearer and more consistent spotting, and thus the <em>lava</em> morpho was born! which is what I have here. Pics don't render justice to how cool these little guys look!
+                    </p>
+                    <p>
+                        I got them very recently, but one or two of them must've been pregnant - as I've now been blessed with tiny teeny baby 'pods!
+                    </p>
+
+                    <figure style="text-align: center;">
+                        <img class="smallpic" src="/main-site/images/hobbies/snails/isopodbabies.jpg" alt="Baby isopods - they're tiny, white, and have a dark stripe in the middle of their bodies.">
+                        <figcaption>Babies!!</figcaption>
+                    </figure>
+
+                    <div class="gallery">
+                        <img src="/main-site/images/hobbies/snails/isopod1.jpg" alt="Closeup of a brownish-orange isopod.">
+                        <img src="/main-site/images/hobbies/snails/isopod4.jpg" alt="A black isopod resting on a human hand.">
+                        <img src="/main-site/images/hobbies/snails/isopod2.jpg" alt="A couple of isopods in their tank, climbing on a branch and walking on the ground.">
+                    </div>
+                </details>
+
+                
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="critters.html">⪦ Back</a></button>
+                </div>
+
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+   
+    <div id="nutshells" style="display: none;"> <!-- Shh! This is the secret place where I have the nutshell text hidden in! :D the display: none shouldn't be needed but you can never know! -->
+        <div>
+            <h5>:x nutshells!</h5>
+            <p>
+                <a href="https://ncase.me/nutshell/"><em>Nutshell</em></a> is a lovely tool created by Nicky Case, and allows for readers to choose wheter or not to expand on a topic and read tangents, without losing track of the main text! It allows embedding from other sites, as well as images and videos. Hope you'll have fun seeing them around and, perhaps, using them yourself! :D
+            </p>
+        </div>
+
+        <div>
+            <h6>:x shesnail</h6>
+            <p>
+                Most snails, unlike most animals we keep as pets, are <em>hermaphrodites</em>! They possess both male and female reproductive organs, and can even occasionally self-fecundate! So while assigning a "gender" to an animal is always a slightly silly endeavour, it's at least ten times as silly with snails. But "snail" is a feminine noun in Italian, and so I've decided that she's a girlie.
+            </p>
+        </div>
+        <div>
+            <h6>:x aestivation</h6>
+            <p>
+                <em>Aestivation</em> is the complementary state to <em>hibernation</em>. Animals hibernate when it's way too cold out for them - and aestivate when it's way too hot, or dry.<br>
+                I guarantee I'm still keeping her tank humid, and it's no hotter than 25°C these days - her species is just known to aestivate from May to Semptember/October, and then hang around a bit before going back to hibernation around November/December. How do they manage?? I have no idea.
+            </p>
+            <p>
+                When they decide to enter dormancy, snails "close" the door of their shell by creating a layer - called <em>epiphragm</em>. These can be more or less solid depending on species. I'm sure you've already seen a snail hibernating before!
+            </p>
+            <figure>
+                <img class="smallpic" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Helix_pomatia_operculum_hg.jpg" alt="A hibernating Helix pomatia with a calcareous epiphragm in place.">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/w/index.php?curid=1000640">By Hannes Grobe 06:45, 30 July 2006 (UTC) - Own work, CC BY-SA 2.5</a>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+</body>
+</html>

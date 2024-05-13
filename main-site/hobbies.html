@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="/load.js"></script>
+    <script src="/music.js"></script>
+
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            
+        }
+
+        .grid-element {
+            padding: 7px;
+            background-color: #dcf58fc5;
+            border-radius: 30px;
+            border: 1.7px #e67700 solid;
+            max-width: fit-content;
+        }
+
+        .grid-element:hover {
+            background-color: #dcf58fc5;
+            border: 3px #e67700 solid;
+            }
+    </style>
+    
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <p>
+                    WIP! I intend to collect miscellaneous projects I do for fun here, as well as things I care about. But it's not a priority!
+                    <!-- To add: psiconautica, giardinaggio, archiving  -->
+                </p>
+
+                <div class="grid">
+
+                    <h2 class="grid-element">
+                        <a href="hobbies/critters/critters.html">Snails & Invertebrate keeping</a>
+                    </h2>
+
+                </div>
+                
+                           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>

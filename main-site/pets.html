@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="/load.js"></script>
+    <script src="/music.js"></script>
+
+    <style>
+        body {
+            background-image: url(/main-site/images/backgrounds/prato6.jpg);
+            background-size: cover;
+        }
+
+
+        .greenbox {
+             background-color: rgb(203, 234, 157, 80%);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            
+        }
+
+        .pet {
+            width: 170px;
+            border-radius: 10%;
+            padding: 2%;
+        
+        }
+
+        .pet-details img{
+            width: 95px;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .petname {
+            
+            font-size: smaller;
+        }
+
+        .pet-pic {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 5px;
+            padding-right: 5%;
+        }
+
+
+        .modal {
+            display: none; /* Stays hidden by default */
+            width: 50vw;
+            position: fixed;
+            top: 50%; /* Position the top edge of the modal at the middle of the screen vertically */
+            left: 50%; /* Position the left edge of the modal at the middle of the screen horizontally */
+            transform: translate(-50%, -50%); /* Offset the modal to center it exactly in the middle */
+            background: rgb(191, 189, 236);
+            padding: 2%;
+            border-radius: 20px;
+            border: 5px solid rgb(159, 138, 205);
+            max-height: 75vh;
+            overflow-y: scroll;
+            font-size: small;
+        }    
+
+        .modal-close {
+            background-color: rgba(134, 126, 158, 0.8);
+            border-radius: 5px;
+            padding: 0.5%;
+        }
+
+        .modal-button:checked + .modal {   /* + is an Adjacent/Next Sibling Combinator!! https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator https://css-tricks.com/almanac/selectors/a/adjacent-sibling/ */
+            display: block;
+        }
+
+    </style>
+    
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+                
+                <h2 class="eng" style="color: rgb(230, 81, 0); margin-bottom: 0px;">Pet Shrine</h2>
+                <p class="eng" style="margin-top: 1%;"">
+                        A safe haven where digital versions of animals of all kinds can chill together.
+                </p>
+                <br>
+                <div class="grid">
+
+                    <!-- Pet1 Stella by Ray -->
+                    <div class="pet">
+                        <label for="stella" class="pet-details"> <!-- Acts as a "label" to the button that triggers the info -->
+                            <img style="background-color: rgba(158, 194, 241, 0.5);" src="/main-site/images/pets/Stella/stella33.jpg">
+                            <div class="petname">
+                                <h2 style="color: rgb(230, 81, 0); display: inline;">Stella</h2> <span style="font-size: smaller; margin-left: 5%;">♡ Ray </span>
+                                <p class="eng" style="margin-top: 2px;">
+                                    1997-2011<br>
+                                    My big sister and childhood best friend
+                                </p>
+                            </div>
+                        </label>
+
+                        <input type="checkbox" id="stella" class="modal-button hidden"> <!-- The actual button however is hidden -->
+
+                        <div class="modal">
+                            <label for="stella" class="modal-close">Close</label> <!-- To close the popup -->
+                            <p class="eng">
+                                My sister, my glutton!
+                                We miss you.
+                            </p>
+                            <br>
+                            <img class="pet-pic" src="/main-site/images/pets/Stella/stella07.JPG">
+                            <img class="pet-pic" src="/main-site/images/pets/Stella/stella1.png">
+                            <img class="pet-pic" src="/main-site/images/pets/Stella/stella2.png">
+                        </div>
+                    </div>
+                    <!-- End of Pet1 Stella by Ray -->
+
+                    <!-- Pet2 Titti by Ray -->
+                    <div class="pet">
+                        <label for="titti" class="pet-details"> <!-- Acts as a "label" to the button that triggers the info -->
+                            <img src="/main-site/images/pets/Titti/tittiav.jpg">
+                            <div class="petname">
+                                <h2 style="color: rgb(0, 153, 255); display: inline;">Titti</h2> <span style="font-size: smaller; margin-left: 5%;">♡ Ray </span>
+                                <p class="eng" style="margin-top: 2px;">
+                                    Illegal turtle with a ravenous appetite<br>
+                                    
+                                </p>
+                            </div>
+                        </label>
+
+                        <input type="checkbox" id="titti" class="modal-button hidden"> <!-- The actual button however is hidden -->
+
+                        <div class="modal">
+                            <label for="titti" class="modal-close">Close</label> <!-- To close the popup -->
+                            <p class="eng">
+                                A scoundrel!
+                            </p>
+                            <br>
+                            <img class="pet-pic" src="/main-site/images/pets/Titti/buffa.jpg">
+                            <img class="pet-pic" src="/main-site/images/pets/Titti/tarta.jpg">
+                            <br><br>
+                            <label for="titti" class="modal-close">Close</label> <!-- To close the popup -->
+                        </div>
+                    </div>
+                    <!-- End of Pet2 Titti by Ray -->
+
+                    <!-- ? by You? -->
+                    <div class="pet">
+                        <label for="you" class="pet-details"> <!-- Acts as a "label" to the button that triggers the info -->
+                            <img style="background-color: rgba(158, 194, 241, 0.5);" src="/main-site/images/my-photos/ageroladog2021.4.jpg">
+                            <div class="petname">
+                                <h2 style="color: rgb(243, 87, 176); display: inline;">Someone</h2> <span style="font-size: smaller; margin-left: 5%;">♡ You? </span>
+                                <p class="eng" style="margin-top: 2px;">
+                                    <a href="/main-site/get-in-touch.html">Submit a pet!</a>
+                                </p>
+                            </div>
+                        </label>
+
+                        <input type="checkbox" id="you" class="modal-button hidden"> <!-- The actual button however is hidden -->
+
+                        <div class="modal">
+                            <label for="you" class="modal-close">Close</label> <!-- To close the popup -->
+                            <p class="eng">
+                                There could be your pet here!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End of ? by You? -->
+
+
+
+
+                </div>
+
+                
+            </div>
+
+        </main>
+                  
+                
+                
+                
+                    
+                
+            
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>
