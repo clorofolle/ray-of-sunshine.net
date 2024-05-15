@@ -27,3 +27,14 @@ function toggleLanguage() {
         el.classList.toggle('hidden');
     });
 }
+
+
+// Keep links working on github pages
+  (function() {
+    var host = window.location.hostname;
+    var base = document.createElement('base');
+    base.href = host === 'clorofolle.github.io' ? '/ray-of-sunshine.net/' : '/';
+    document.head.appendChild(base);
+  })();
+
+
