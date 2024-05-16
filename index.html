@@ -10,10 +10,16 @@
     <!-- Link to CSS & Javascript files -->
 
     <!-- Keep links working on github pages -->
+    <style>
+        :root {
+            --base-path: '/'; /* Default base path */
+        }
+    </style>
     <script>
         (function() {
             var host = window.location.hostname;
             var baseHref = host === 'clorofolle.github.io' ? '/ray-of-sunshine.net/' : '/';
+            document.documentElement.style.setProperty('--base-path', baseHref);
             var base = document.createElement('base');
             base.href = baseHref;
             document.head.appendChild(base);
@@ -33,53 +39,32 @@
                 }
             }
 
-            // Update font paths in CSS rules
-            function updateFontPaths() {
-                var styleSheets = document.styleSheets;
-                for (var i = 0; i < styleSheets.length; i++) {
-                    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
-                    for (var j = 0; j < rules.length; j++) {
-                        var rule = rules[j];
-                        if (rule instanceof CSSFontFaceRule) {
-                            var src = rule.style.getPropertyValue('src');
-                            if (src.includes('url(')) {
-                                var newSrc = src.replace(/url\(\//g, 'url(' + baseHref);
-                                rule.style.setProperty('src', newSrc);
-                            }
-                        }
-                    }
-                }
-            }
-
             document.addEventListener('DOMContentLoaded', function() {
                 updatePaths('img', 'src');
                 updatePaths('script', 'src');
                 updatePaths('link', 'href');
                 updatePaths('a', 'href');
-                updateFontPaths();
 
                 // Debugging: Log the updated elements
-                console.log('Paths updated for img, script, link, a tags, and fonts');
+                console.log('Paths updated for img, script, link, and a tags');
             });
 
             // Load sidebar content with updated base URL
-            document.addEventListener("DOMContentLoaded", function() {
-                function loadSidebarContent(elementId, filePath, callback) {
-                    var adjustedFilePath = filePath.startsWith('/') ? baseHref + filePath.substring(1) : filePath;
-                    fetch(adjustedFilePath)
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById(elementId).innerHTML = data;
-                            if (callback) callback();
-                        })
-                        .catch(err => console.error(err));
-                }
+            function loadSidebarContent(elementId, filePath, callback) {
+                var adjustedFilePath = filePath.startsWith('/') ? baseHref + filePath.substring(1) : filePath;
+                fetch(adjustedFilePath)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                        if (callback) callback();
+                    })
+                    .catch(err => console.error(err));
+            }
 
-                loadSidebarContent('header', '/header.html');
-                loadSidebarContent('sidebar-left', '/sidebar-left.html');
-                loadSidebarContent('sidebar-right', '/sidebar-right.html');
-                loadSidebarContent('footer', '/footer.html');
-            });
+            loadSidebarContent('header', '/header.html');
+            loadSidebarContent('sidebar-left', '/sidebar-left.html');
+            loadSidebarContent('sidebar-right', '/sidebar-right.html');
+            loadSidebarContent('footer', '/footer.html');
         })();
     </script>
 
