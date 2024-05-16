@@ -12,18 +12,37 @@
     <!-- Keep links working on github pages -->
     <script>
         (function() {
-        var host = window.location.hostname;
-        var base = document.createElement('base');
-        if (host === 'clorofolle.github.io') {
-            base.href = '/ray-of-sunshine.net/';
-        } else {
-            base.href = '/';
-        }
-        document.head.appendChild(base);
+            var host = window.location.hostname;
+            var baseHref = host === 'clorofolle.github.io' ? '/ray-of-sunshine.net/' : '/';
+            var base = document.createElement('base');
+            base.href = baseHref;
+            document.head.appendChild(base);
 
-        // Debugging: Log the base URL to the console
-        console.log('Base URL set to:', base.href);
-    })();
+            // Debugging: Log the base URL to the console
+            console.log('Base URL set to:', base.href);
+
+            // Update all absolute paths to be relative to the base URL
+            function updatePaths(tagName, attribute) {
+                var elements = document.getElementsByTagName(tagName);
+                for (var i = 0; i < elements.length; i++) {
+                    var element = elements[i];
+                    var src = element.getAttribute(attribute);
+                    if (src && src.startsWith('/')) {
+                        element.setAttribute(attribute, baseHref + src.substring(1));
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                updatePaths('img', 'src');
+                updatePaths('script', 'src');
+                updatePaths('link', 'href');
+                updatePaths('a', 'href');
+
+                // Debugging: Log the updated elements
+                console.log('Paths updated for img, script, link, and a tags');
+            });
+        })();
     </script>
 
 
