@@ -2,6 +2,18 @@
 <html>
 <head>
     <!-- Link to CSS & Javascript files -->
+
+    <!-- Keep links working on github pages -->
+    <script>
+        (function() {
+            var host = window.location.hostname;
+            var base = document.createElement('base');
+            base.href = host === 'clorofolle.github.io' ? '/ray-of-sunshine.net/' : '/';
+            document.head.appendChild(base);
+        })();
+    </script>
+
+
     <script src="load.js"></script>  <!-- Loads header, sidebars, footer. Also has the code that allows for language switching. The slash at the start of the pathname makes it an absolute path: it will always look for said file starting from root folder. Without a slash it would be a relative path, starting instead from the location of current .html file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="/main-site/music.js"></script> <!-- Used for playlists, not in use here atm -->
