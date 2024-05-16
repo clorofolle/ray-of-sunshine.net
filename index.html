@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Link to CSS & Javascript files -->
+    <script src="load.js"></script>  <!-- Loads header, sidebars, footer. Also has the code that allows for language switching. The slash at the start of the pathname makes it an absolute path: it will always look for said file starting from root folder. Without a slash it would be a relative path, starting instead from the location of current .html file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="/main-site/music.js"></script> <!-- Used for playlists, not in use here atm -->
+
     <meta charset="UTF-8"> <!-- Essential to show Unicode characters -->
     <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Essential for the webpage to be responsive on mobile -->
     <title>Little pieces of joy</title>
     <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" > <!-- Icon that shows up in the browser! -->
 
-    <!-- Link to CSS & Javascript files -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="/load.js"></script>  <!-- Loads header, sidebars, footer. Also has the code that allows for language switching. The slash at the start of the pathname makes it an absolute path: it will always look for said file starting from root folder. Without a slash it would be a relative path, starting instead from the location of current .html file -->
-    <script src="/main-site/music.js"></script> <!-- Used for playlists, not in use here atm -->
-
-   
+    
 
     <style>
     /*Most of CSS is loaded externally, but I keep some internal CSS for things that only appear on certain pages.*/
