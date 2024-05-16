@@ -5,73 +5,12 @@
     <meta charset="UTF-8"> <!-- Essential to show Unicode characters -->
     <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Essential for the webpage to be responsive on mobile -->
     <title>Little pieces of joy</title>
-    <link rel="icon" href="/main-site/images/favicon32.gif" type="image/gif" > <!-- Icon that shows up in the browser! -->
+    <link rel="icon" href="images/favicon32.gif" type="image/gif" > <!-- Icon that shows up in the browser! -->
 
     <!-- Link to CSS & Javascript files -->
-
-    <!-- Keep links working on github pages -->
-    <style>
-        :root {
-            --base-path: '/'; /* Default base path */
-        }
-    </style>
-    <script>
-        (function() {
-            var host = window.location.hostname;
-            var baseHref = host === 'clorofolle.github.io' ? '/ray-of-sunshine.net/' : '/';
-            document.documentElement.style.setProperty('--base-path', baseHref);
-            var base = document.createElement('base');
-            base.href = baseHref;
-            document.head.appendChild(base);
-
-            // Debugging: Log the base URL to the console
-            console.log('Base URL set to:', base.href);
-
-            // Update all absolute paths to be relative to the base URL
-            function updatePaths(tagName, attribute) {
-                var elements = document.getElementsByTagName(tagName);
-                for (var i = 0; i < elements.length; i++) {
-                    var element = elements[i];
-                    var src = element.getAttribute(attribute);
-                    if (src && src.startsWith('/')) {
-                        element.setAttribute(attribute, baseHref + src.substring(1));
-                    }
-                }
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-                updatePaths('img', 'src');
-                updatePaths('script', 'src');
-                updatePaths('link', 'href');
-                updatePaths('a', 'href');
-
-                // Debugging: Log the updated elements
-                console.log('Paths updated for img, script, link, and a tags');
-            });
-
-            // Load sidebar content with updated base URL
-            function loadSidebarContent(elementId, filePath, callback) {
-                var adjustedFilePath = filePath.startsWith('/') ? baseHref + filePath.substring(1) : filePath;
-                fetch(adjustedFilePath)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(elementId).innerHTML = data;
-                        if (callback) callback();
-                    })
-                    .catch(err => console.error(err));
-            }
-
-            loadSidebarContent('header', '/header.html');
-            loadSidebarContent('sidebar-left', '/sidebar-left.html');
-            loadSidebarContent('sidebar-right', '/sidebar-right.html');
-            loadSidebarContent('footer', '/footer.html');
-        })();
-    </script>
-
-
     <script src="load.js"></script>  <!-- Loads header, sidebars, footer. Also has the code that allows for language switching. The slash at the start of the pathname makes it an absolute path: it will always look for said file starting from root folder. Without a slash it would be a relative path, starting instead from the location of current .html file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="/main-site/music.js"></script> <!-- Used for playlists, not in use here atm -->
+    <!--<script src="music.js"></script>  Used for playlists, not in use here atm -->
 
     
 
@@ -322,12 +261,12 @@
             <div class="content">
                 <span class="ita hidden" style="font-weight: bolder;">La traduzione italiana è ancora un grande work in progress ed è al momento attiva solo su alcune pagine!</span>
 
-                <div style="text-align: center;"> <img style="max-width: 200px;" src="/main-site/images/decorations/Unicorn3b.gif" alt="Galloping Unicorn"></div>
+                <div style="text-align: center;"> <img style="max-width: 200px;" src="images/decorations/Unicorn3b.gif" alt="Galloping Unicorn"></div>
 
                 
                 
                 Hello, and welcome to my little corner of the web! My name is Ray, but also Annalisa or Anna. I'm a person from Italy with too many passions to count and too much enthusiasm to keep inside. Among all these little passions there is a lot of love for personal blogs and websites - a neighborhood of windows to peek in, each window showcasing something dear to a certain person. This is my little window - <a href="https://maggieappleton.com/garden-history">like a garden</a>, I curate it, rearrange every page and icon just for the sake of doing so.<br> 
-                I hope you can find something interesting, or fascinating, or pretty - something consistent that you <a href="/main-site/share-and-enjoy.html">can take home with you</a> - or even just <a href="/main-site/betterweb.html">a novel perspective</a> on the internet!
+                I hope you can find something interesting, or fascinating, or pretty - something consistent that you <a href="main-site/share-and-enjoy.html">can take home with you</a> - or even just <a href="main-site/betterweb.html">a novel perspective</a> on the internet!
                 <br>
 
                 <div class="newsbox2 hiddenscroll">
@@ -422,7 +361,7 @@
             object-fit: cover; -->
             <div class="imagebox border">
                 <a href="main-site/hobbies/critters/critters.html">
-                <img style="width: 100%;" src="/main-site/images/hobbies/snails/erika2.png" alt="Small snail climbing on a finger and looking curiously ahead. There's a computer in the background.">
+                <img style="width: 100%;" src="main-site/images/hobbies/snails/erika2.png" alt="Small snail climbing on a finger and looking curiously ahead. There's a computer in the background.">
                 </a>
                 
             </div> 
@@ -468,14 +407,14 @@
                 </div>    
                     <br>
                     <div style="text-align: center;">
-                        <a href="https://solaria.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/solaria.gif" alt="Solaria"></a>
-                        <a href="https://foreverliketh.is/"><img style="margin-right: 7px;" src="/main-site/images/buttons/foreverliketh.is.png" alt="Forever like this"></a>
-                        <a href="https://divergentrays.com/ "><img style="margin-right: 7px;" src="/main-site/images/buttons/divergentrays.png" alt="Divergent Rays"></a>
+                        <a href="https://solaria.neocities.org/"><img style="margin-right: 7px;" src="images/buttons/solaria.gif" alt="Solaria"></a>
+                        <a href="https://foreverliketh.is/"><img style="margin-right: 7px;" src="images/buttons/foreverliketh.is.png" alt="Forever like this"></a>
+                        <a href="https://divergentrays.com/ "><img style="margin-right: 7px;" src="images/buttons/divergentrays.png" alt="Divergent Rays"></a>
                         <br><br>
-                        <a href="https://jamestalon.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/jamestalon.png" alt="James Talon"></a>
-                        <a href="https://fragmentedsand.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/fragmentedsand.png" alt="Fragmented Sand"></a> 
-                        <a href="https://www.valycenegative.it/"><img style="margin-right: 7px;" src="/main-site/images/buttons/valycenegative.png" alt="Valyce Negative"></a>
-                        <a href="https://sugarblush.neocities.org/"><img style="margin-right: 7px;" src="/main-site/images/buttons/sugarblush-button.png" alt="Sugar Blush"></a>
+                        <a href="https://jamestalon.neocities.org/"><img style="margin-right: 7px;" src="images/buttons/jamestalon.png" alt="James Talon"></a>
+                        <a href="https://fragmentedsand.neocities.org/"><img style="margin-right: 7px;" src="images/buttons/fragmentedsand.png" alt="Fragmented Sand"></a> 
+                        <a href="https://www.valycenegative.it/"><img style="margin-right: 7px;" src="images/buttons/valycenegative.png" alt="Valyce Negative"></a>
+                        <a href="https://sugarblush.neocities.org/"><img style="margin-right: 7px;" src="images/buttons/sugarblush-button.png" alt="Sugar Blush"></a>
                         
                     </div>
                 </div>

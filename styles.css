@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-Black.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-Black.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Black.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -13,8 +13,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-BlackItalic.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-BlackItalic.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-BlackItalic.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -22,8 +22,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-Bold.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-Bold.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Bold.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -31,8 +31,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-BoldItalic.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-BoldItalic.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-BoldItalic.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -40,8 +40,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-Italic.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-Italic.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Italic.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -49,8 +49,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-Light.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-Light.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Light.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -58,8 +58,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-LightItalic.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-LightItalic.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-LightItalic.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -67,8 +67,8 @@
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/merriweather/Merriweather-Regular.woff2') format('woff2'),
-        url('/fonts/merriweather/Merriweather-Regular.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Regular.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/merriweather/Merriweather-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -79,8 +79,8 @@
 /* Lora */
 @font-face {
     font-family: 'loraregular';
-    src: url('lora-variablefont_wght-webfont.woff2') format('woff2'),
-         url('lora-variablefont_wght-webfont.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/lora-variablefont_wght-webfont.woff2') format('woff2'),
+         url('https://ray-of-sunshine.net/fonts/lora-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -88,8 +88,8 @@
 
 @font-face {
     font-family: 'loraitalic';
-    src: url('lora-italic-variablefont_wght-webfont.woff2') format('woff2'),
-         url('lora-italic-variablefont_wght-webfont.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/lora-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('https://ray-of-sunshine.net/fonts/lora-italic-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -98,8 +98,8 @@
 /* used in about-me box */
 @font-face {
     font-family: '000webfont';
-    src: url(/fonts/000webfont.woff2) format('woff2'),
-        url(/fonts/000webfont.woff) format('woff');
+    src: url(https://ray-of-sunshine.net/fonts/000webfont.woff2) format('woff2'),
+        url(https://ray-of-sunshine.net/fonts/000webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap; 
@@ -107,8 +107,8 @@
 
   @font-face {
     font-family: 'virale';
-    src: url(/fonts/virale.woff2) format('woff2'),
-        url(/fonts/virale.woff) format('woff');
+    src: url(https://ray-of-sunshine.net/fonts/virale.woff2) format('woff2'),
+        url(https://ray-of-sunshine.net/fonts/virale.woff) format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -116,8 +116,8 @@
 /* placeholder title font */
 @font-face {
     font-family: 'Yellowtail';
-    src: url('/fonts/Yellowtail-Regular.woff2') format('woff2'),
-        url('/fonts/Yellowtail-Regular.woff') format('woff');
+    src: url('https://ray-of-sunshine.net/fonts/Yellowtail-Regular.woff2') format('woff2'),
+        url('https://ray-of-sunshine.net/fonts/Yellowtail-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -151,16 +151,16 @@ body {
 
 /*Changes mouse pointer*/
 * {                                 
-    cursor: url(/snail.cur), default;
+    cursor: url(https://ray-of-sunshine.net/snail.cur), default;
 }
 
 /*Changes mouse pointer to be something else when hovering certain elements. A bit messy*/
 a, a:hover {
-    cursor: url(/1422.cur), pointer;
+    cursor: url(https://ray-of-sunshine.net/1422.cur), pointer;
 }
 
 a img, a:hover img, summary h2, summary h3, summary h4, summary h5, summary h6, .petname, .petname h2, .modal-close, a h2, a h3, a h4, a h5, a h6 {
-    cursor: url(/1403.cur), pointer;
+    cursor: url(https://ray-of-sunshine.net/1403.cur), pointer;
 }
 
 /*divs with .ita or .eng classes appear normally, but once they gain the .hidden class, they disappear.*/
@@ -351,11 +351,11 @@ header img{
 }
 
 .langbuttoneng {
-    background-image: url(/main-site/images/langbuttoneng.png);
+    background-image: url(https://ray-of-sunshine.net/main-site/images/langbuttoneng.png);
 }
 
 .langbuttonita {
-    background-image: url(/main-site/images/langbuttonita.png);
+    background-image: url(https://ray-of-sunshine.net/main-site/images/langbuttonita.png);
 }
 /*Header styles end here*/
 

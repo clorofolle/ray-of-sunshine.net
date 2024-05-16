@@ -1,10 +1,10 @@
-// Loads header, sidebars, footer. Paths to .html files are absolute to allow this code to be ran from any page.
+// Loads header, sidebars, footer. Paths to .html files are full URLs to ensure compatibility with github pages - oterwise, just keeping the URLs absolute will allow this code to be ran from any page on other hosts.
 
 document.addEventListener("DOMContentLoaded", function() {
-      loadSidebarContent('header', '/header.html');
-      loadSidebarContent('sidebar-left', '/sidebar-left.html');
-      loadSidebarContent('sidebar-right', '/sidebar-right.html');
-      loadSidebarContent('footer', '/footer.html');
+      loadSidebarContent('header', 'https://ray-of-sunshine.net/header.html');
+      loadSidebarContent('sidebar-left', 'https://ray-of-sunshine.net/sidebar-left.html');
+      loadSidebarContent('sidebar-right', 'https://ray-of-sunshine.net/sidebar-right.html');
+      loadSidebarContent('footer', 'https://ray-of-sunshine.net/footer.html');
   });
   
   function loadSidebarContent(elementId, filePath, callback) {
