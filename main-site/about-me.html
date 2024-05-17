@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="../images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="../load.js"></script>
+    <script src="../music.js"></script>
+
+    <!--Most of CSS is loaded externally, but I keep some internal CSS for things that only appear on certain pages. -->
+
+    <style> 
+       
+       /*Slightly different color from other pages bc I feel like it*/
+        .highlightbox  {
+            background-color: rgb(174, 219, 160);
+            border-radius: 10px;
+            padding: 2%;
+        }
+
+        /*Styles the little poem box*/
+        .poem {         
+            
+            background-color: rgb(250, 239, 215);
+            border-radius: 10px;
+            margin: 2% auto;
+            padding: 2%;
+            width: 30%;
+            font-size: smaller;
+            text-align: left;
+            font-style: italic;
+            line-height: 15px;
+            width: fit-content;
+        }
+        
+        /*Green box with likes+dislikes*/
+        .about-box {        
+            border: 5px groove #276945;
+            margin: auto;
+            padding: 10px;
+            width: 33vw;
+            background-color: rgba(9, 71, 38, 0.6);
+            border-radius: 20px;
+       
+        }
+
+        .about-header h2, .about-header p {
+            color: #fffbf1;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .about-header h2 {
+            font-size: 18px;
+        }
+
+        .about-header p {
+            font-size: small;
+        }
+
+        .about-body {
+            display: flex;
+            font-size: large;
+            color: #fffbf1;
+            font-family: '000webfont', Arial, Helvetica, sans-serif;            
+        }
+
+        .about-love, .about-hate {
+            flex: 1;
+            padding: 10px 0;
+            line-height: 10px;
+           
+        }
+
+        .about-image {
+            flex: 1;
+            padding: 5px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        /*End of green box stuff!*/
+
+        .playlist {
+            overflow-y: scroll;
+            max-height: 333px;
+        }
+
+        /*this is here to deal with the extra sections on mobile! It's a bit chaotic but I eyeball it.*/
+        @media screen and (max-width: 600px) {  
+
+        /* makes the character box wider, otherwise it'd be tiny on mobile! */
+        .about-box {   
+            width: 100%;
+            margin: auto;
+        }
+
+        /* Same but for the poetry box */
+        .poem {         
+            width: 60%; 
+            
+        }
+
+        .playlist {
+            width: 100%;
+            margin: auto;
+        }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                
+<!-- Start of english text -->
+            <div class="eng"> 
+                 <!-- For the lil character box. Styling for this is internal! -->
+                 <div class="about-box">
+                    <div class="about-header">
+                        <h2 class="about-name">Ray | Anna</h2>
+                        <p class="character-info">25 | she/they </p>
+                    </div>
+                    <div class="about-body">
+                        <div class="about-image">
+                            <!-- Replace with your pixel art image -->
+                            <img src="../images/my-art/pixel/Raygif.gif"" alt="Pixel doll showing the webmaster's sona: a stylized anthro yellow fox, bouncing in place.">
+                        </div>
+                        <div class="about-love">
+                        <span style="font-size: larger;"><b>Loves</b></span><br><br>
+                        - the colour green<br>
+                        - the number three<br>
+                        - beans<br>
+                        - plants<br>
+                        - sunny days<br>
+                        - when it's hot outsite and you dip your hands 
+                        and feet into fresh water<br>
+                        - learning!<br>
+                        - nutella
+                            
+                        </div>
+
+                        <div class="about-hate">  
+                        <span style="font-size: larger;"><b>Hates</b></span><br><br>
+                        - noisy places<br>
+                        - grimdark<br>
+                        - gluten :(<br>
+                        - touching flour or fine sand<br>
+                        - sitting down and actually watching movies<br>
+                        - single-use plastics<br>
+                        - labour.<br>
+                        - nutella (abusive relationship with)
+                                
+                        </div>
+                    </div>
+                </div>
+                <!-- End of lil character box. -->
+                
+                <div>
+                    <p>
+                        Hello! I usually go by Ray in English, and either Anna or Annalisa in Italian.<br>
+                        I'm a person with a little too much time on their hands and a little too much curiousity to keep still.<br>
+                        <br>
+                        I love following the deep trails of wikipedia links, creating art, plants (observing, growing, being in proximity of, dreamily sighing while thinking about), 
+                        walking/exploring, and generally doing things with my hands, keeping them busy. My interests and passions are almost boundless!<br>
+                        <br>
+                        
+                    </p>
+                    <p class="highlightbox" style="font-size: small;">    
+                        I'm a friendly fellow, but please know this:<br>
+                        My energy levels, regarding pretty much anything, are extremely fluctuant.<br>
+                        <br>
+                        Inconstancy is my greatest defect, and as much as I'm trying to fix it, so far it's been
+                        an unavoidable constant (the irony is not lost on me!!) in my life.<br>
+                        <br>
+                        Both my interest and the energy I can have to do all sort of things, from updating the website to talking with friends, 
+                        come and go in waves.<br>
+                        I can be very active and do certain things daily for a couple months and then disappear for six.<br>
+                        <br>
+                        Please know when interacting with this website or chatting to me that this is a possibility. I'm sorry!<br>
+                        <br>
+                        I still hope you can enjoy your time spent here! And I would love to get to know some people here. <a href="get-in-touch.html">Get in touch!</a>
+
+                    </p>
+                </div>
+            </div>
+            <!-- End of english text -->
+
+        <!-- Start of italian text -->  
+            <div class="ita hidden">
+                <!-- For the lil character box. Styling for this is internal! -->
+                <div class="about-box">
+                    <div class="about-header">
+                        <h5 class="about-name">Anna | Ray</h2>
+                        <h6 class="character-info">25</h3>
+                    </div>
+                    <div class="about-body">
+                        <div class="about-image">
+                            <!-- Replace with your pixel art image -->
+                            <img src="../images/my-art/pixel/Raygif.gif"" alt="Pixel doll showing the webmaster's sona: a stylized anthro yellow fox, bouncing in place.">
+                        </div>
+                        <div class="about-love" style="padding-right: 3%;">
+                        <b>Ama</b><br><br>
+                        - il colore verde<br>
+                        - il numero tre<br>
+                        - <b>I FAGIOLI.</b> Ma anche gli altri legumi hanno un posto d'onore nel suo cuore<br>
+                        - le piante, tutte le piante<br>
+                        - stare all'aria aperta<br>
+                        - cucinare<br>
+                        - i giorni di sole<br>
+                        - quando fuori fa caldo ed immergi mani e piedi 
+                        in un secchio d'acqua fresca<br>
+                        - imparare cose nuove<br>
+                        - le cianfrusaglie<br>
+                        - la nutella
+                            
+                        </div>
+
+                        <div class="about-hate">  
+                        <b>Detesta</b><br><br>
+                        - luoghi rumorosi<br>
+                        - quelle vignette su instagram che vogliono trasmetterti 
+                        la profondità dell'essere depressi<br>
+                        - avere le mani sporche di farina/sabbia fine<br>
+                        - iniziare a guardare i film. dopo un po' mi abituo e passa<br>
+                        - plastica monouso<br>
+                        - il modo in cui abbiamo normalizzato lavorare a nero per 3€ all'ora 
+                        lasciandoci rubare ogni briciola di plusvalore che produce il nostro lavoro<br>
+                        - la nutella (è una relazione abusiva)
+                                
+                        </div>
+                    </div>
+                </div>
+                <!-- End of lil character box. -->
+                
+                <div>
+                    <p>
+                        Ciao! Mi chiamo Annalisa - per tutti Anna, oppure Ray in spazi anglofoni/online.<br>
+                        Sono una persona con un po' troppo tempo libero e che ama ficcare il naso in tanti campi diversi.<br>
+                        <br>
+                        Amo perdermi nei meandri di Wikipedia, fare arte, le piante (osservarle, coltivarle, starne in prossimità, sospirare mentre sogno di esserne circondata), 
+                        camminare, e tenere occupate le mani con mille cose diverse. Ho un'infinità di interessi e passioni che coltivo più o meno superficialmente.<br>
+                        <br>
+                        
+                    </p>
+                    <p class="highlightbox" style="font-size: small;">    
+                        Sono una persona amichevolissima, ma:<br>
+                        I miei livelli di energia sono estremamente variabili, riguardo praticamente ogni cosa.<br>
+                        <br>
+                        L'incostanza è il mio difetto più grande, e per quanto faccia il possibile per cercare di migliorarmi, 
+                        essere incostante è rimasta l'unica costante della mia vita fin'ora. Se ci penso fa un po' ridere!
+                        <br>
+                        <br>
+                        Sono incostante nell'energia che riesco a dedicare nel perseguire i miei interessi, nell'essere socievole - 
+                        ed anche i miei interessi sono volubili.
+                        <br>
+                        Sono capace di tenere attiva un'attività per un paio di mesi giornaliermente e poi così, da un  giorno all'altro, 
+                        sparire per altri sei, andata a fare chissà cos'altro.
+                        <br>
+                        Insomma: questo sito potrebbe restare inattivo per mesi, ed io potrei non rispondere per altrettanto. 
+                        Mi dispiace! Davvero è qualcosa che faccio fatica a controllare, e vorrei che questo resti un hobby senza 
+                        stress per me.<br>
+                        <br>
+                        Spero comunque che tu possa trovare qualcosa di buono in questo piccolo angolo di web, e mi farebbe comunque 
+                        un sacco piacere conoscere persone, sentire opinioni, fare due chiacchiere. Se ti va, <a href="get-in-touch.html">fatti sentire!</a>
+
+                    </p>
+                </div>
+            </div>
+        <!-- End of italian text --> 
+
+            <!-- Medievalsona --> 
+            <figure>
+                <img style="max-width: 350px; border-radius: 10px;" src="../images/other-art/Medievalsona.png" alt="Stylized drawing of a short person in a funny armor, holding a longsword and grinning.">
+                <figcaption style="font-size: small;">by <a href="https://www.instagram.com/stelliger_">Stelliger</a> ♡</figcaption>
+            </figure>
+
+                <br> <!-- this is bad practice, kids! You should use margins! -->
+
+                <!-- Amai - U.Saba -->
+                <div class="poem">
+                    <p>
+                        Amai trite parole ce non uno<br>
+                        osava. M'incantò la rima fiore<br>
+                        amore,<br>
+                        la più antica, difficile del mondo.<br>
+                        <br>
+                        Amai la verità che giace al fondo,<br>
+                        quasi un sogno obliato, che il dolore<br>
+                        riscopre amica. Con paura il cuore<br>
+                        le si accosta, che più non l'abbandona.<br>
+                        <br>
+                        Amo te che mi ascolti e la mia buona<br>
+                        carta lasciata al fine del mio gioco.<br>
+                        <div style="text-align: right;">U. Saba</div>
+                    </p>
+                </div>
+
+                <!-- Playlist -->
+
+                <div class="playlist">
+                    <audio id="audioPlayer" controls>
+                        <source src="../music/COSMO - Abbracciala Abbracciali Abbracciati.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <ul id="playlist">
+                        <li class="active"><a href="../music/COSMO - Abbracciala Abbracciali Abbracciati.mp3">Cosmo - Abbracciala Abbracciali Abbracciati</a></li>
+                        <li><a href="../music/Florence + The Machine - Dog Days Are Over.mp3">Florence + The Machine - Dog Days Are Over</a></li>
+                        <li><a href="../music/Kimya Dawson - Loose Lips.mp3">Kimya Dawson - Loose Lips</a></li>
+                        <li><a href="../music/Ghost Mice - Live Free or Die.mp3">Ghost Mice - Live Free or Die</a></li>
+                        <li><a href="../music/Nana Grizol - Cynicism.mp3">Nana Grizol - Cynicism</a></li>
+                        <li><a href="../music/AJJ - People.mp3">AJJ - People</a></li>
+                        <li><a href="../music/The Scary Jokes - Feelin' So Matryoshka.mp3">The Scary Jokes - Feelin' So Matryoshka</a></li>
+                        <li><a href="../music/Sleeping At Last - You Are Enough.mp3">Sleeping At Last - You Are Enough</a></li>
+                        <li><a href="../music/Haley Heynderickx - Oom Sha La La.mp3">Haley Heynderickx - Oom Sha La La</a></li>
+                        <li><a href="../music/Sidney Gish - Impostor Syndrome.mp3">Sidney Gish - Impostor Syndrome</a></li>
+                        <li><a href="../music/Lucy Dacus - Map On A Wall.mp3">Lucy Dacus - Map On A Wall</a></li>
+                        <li><a href="../music/Calcutta - Allegria....mp3">Calcutta - Allegria...</a></li>
+                        <li><a href="../music/Patricia Taxxon - TETCTEHECDCHOHDGDOGOG.mp3">Patricia Taxxon - TETCTEHECDCHOHDGDOGOG</a></li>
+                        <li><a href="../music/Patricia Taxxon - I'll Be.mp3">Patricia Taxxon - I'll Be</a></li>
+                        <li><a href="../music/Patricia Taxxon - DEDGDECEGOGCHCOTOHTHT.mp3">Patricia Taxxon - DEDGDECEGOGCHCOTOHTHT</a></li>
+                        <li><a href="../music/Lucio Battisti - Abbracciala Abbracciali Abbracciati.mp3">Lucio Battisti - Abbracciala Abbracciali Abbracciati</a></li>
+
+
+
+                    <!-- Add more songs here -->
+                    </ul>
+                </div>
+
+                
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>
