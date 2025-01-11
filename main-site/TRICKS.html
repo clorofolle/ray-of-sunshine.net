@@ -11,7 +11,46 @@
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <script src="../load.js"></script>
     
+    <!-- Prism.js CSS - this is useful for the code blocks! -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet">
+
+    
     <style>
+
+        h1 {
+            font-size: 23px;
+        }
+
+        h2 {
+            font-size: large;
+            text-align: center;
+        }
+
+        .test {
+            margin: auto;
+            margin-bottom: 3%;
+            text-align: center;
+            
+        }
+
+        .highlightbox2 
+        {
+            text-align: center;
+        }
+
+        /* Squishy pet, click me!! */
+
+        .pet {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pet.squash-stretch {
+          transform: scaleX(1.2) scaleY(0.8); /* Squash and stretch */
+        }
+
         /* Image Overlay on Hover */
         .image-container {
             position: relative;
@@ -49,7 +88,7 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-}
+        }
 
          /* Animated Loading Spinner end */
 
@@ -62,18 +101,20 @@
         }
         
         .dropdown-menu ul li {
-	position: relative;
-	display: inline-block;
-}
+	        position: relative;
+	        display: inline-block;
+            background-color: rgb(214, 176, 225);
+    
+        }       
 
-.dropdown-menu li ul {
-	display: none;
-	position: absolute;
-}
+        .dropdown-menu li ul {
+	        display: none;
+	        position: absolute;
+        }
 
-.dropdown-menu li:hover ul {
-	display: block;
-}
+        .dropdown-menu li:hover ul {
+	        display: block;
+        }
         
 
         /* CSS Dropdown Menu end */
@@ -96,29 +137,220 @@
         <main class="greenbox hiddenscroll">  <!-- Main content -->
             <div class="content">
 
-                <!-- Image Overlay on Hover -->
-                <div class="image-container">
-                    <img src="/main-site/images/my-art/pixel/Raygif.gif" alt="Description">
-                    <div class="overlay">More Info</div>
-                </div>
-                <br><br>
-                <!-- Animated Loading Spinner -->
-                <div class="spinner"></div>
-                
-                <!-- CSS Dropdown Menu -->
-                <nav class="dropdown-menu">
-                    <ul>
-                        <li><a href="#">Menu</a>
-                            <ul>
-                                <li><a href="#">Submenu 1</a></li>
-                                <li><a href="#">Submenu 2</a></li>
-                                <li><a href="#">Submenu 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                
+                <h1>A collection of neat tricks</h1>
 
+                https://css-tricks.com/
+                https://ribo.zone/free/snippets/
+
+
+                <!-- Image Overlay on Hover -->
+                <div class="highlightbox2">
+                    <h2>Overlay when hovering on an image</h2>
+                    <div class="image-container test">
+                        <img src="/images/my-art/pixel/Raygif.gif" alt="A cute bouncy yellow fox">
+                        <div class="overlay">More Info</div>
+                    </div>
+                
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>CSS</h3>
+                        </summary>
+                        <pre><code class="language-css">
+.image-container {
+    position: relative;
+    width: 200px;
+    margin: auto;
+}
+                    
+.image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(111, 229, 117, 0.5);
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    transition: .5s ease;
+}
+                    
+.image-container:hover .overlay {
+    height: 50%;
+}
+                        </code></pre>
+                    </details>
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>HTML</h3>
+                        </summary>
+                        <pre><code class="language-html">
+&lt;div class=&quot;image-container&quot; style=&quot;margin-bottom: 3%;&quot;&gt;
+    &lt;img src=&quot;/images/my-art/pixel/Raygif.gif&quot; alt=&quot;Description&quot;&gt;
+    &lt;div class=&quot;overlay&quot;&gt;More Info&lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </details>
+                </div>
+                    
+                    
+                
+                
+                <!-- Animated Loading Spinner -->
+                
+                <div class="highlightbox2">
+                    <h2>Animated loading spinner</h2>
+                    <div class="spinner test"></div>
+                
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>CSS</h3>
+                        </summary>
+                        <pre><code class="language-css">
+.spinner {
+    border: 4px solid rgba(0,0,0,.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: rgb(8, 169, 11);
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+                        </code></pre>
+                    </details>
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>HTML</h3>
+                        </summary>
+                        <pre><code class="language-html">
+&lt;div class=&quot;spinner&quot;&gt;&lt;/div&gt;
+                        </code></pre>
+                    </details>
+                </div>
+                
+                
+                <!-- Dropdown Menu -->
+
+                                <div class="highlightbox2">
+                    <h2>Dropdown Menu</h2>
+                    
+                    <nav class="dropdown-menu test" style="text-align: center">
+                        <ul>
+                            <li><a href="#">Menu</a>
+                                <ul>
+                                    <li><a href="#">Thing 1</a></li>
+                                    <li><a href="#">Thing 2</a></li>
+                                    <li><a href="#">Thing 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>CSS</h3>
+                        </summary>
+                        <pre><code class="language-css">
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+                            
+.dropdown-menu ul li {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(214, 176, 225);
+}       
+                    
+dropdown-menu li ul {
+    display: none;
+    position: absolute;
+}
+                    
+.dropdown-menu li:hover ul {
+    display: block;
+}
+                        </code></pre>
+                    </details>
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>HTML</h3>
+                        </summary>
+                        <pre><code class="language-html">
+&lt;nav class=&quot;dropdown-menu&quot;&gt;
+    &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Thing 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Thing 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Thing 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                        </code></pre>
+                    </details>
+                </div>
+                
+                
+                <!-- Squishy pet, click me!-->
+                
+                  <div class="highlightbox2">
+                    <h2>Image gets squished on click!</h2>
+                    
+                    <div class="pet test" id="pet">
+                        <img src="/images/my-art/pixel/rayplush.png">
+                    </div>
+                
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>CSS</h3>
+                        </summary>
+                        <pre><code class="language-css">
+.pet {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+                    
+.pet.squash-stretch {
+    transform: scaleX(1.2) scaleY(0.8); /* Squash and stretch */
+}
+                        </code></pre>
+                    </details>
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>HTML</h3>
+                        </summary>
+                        <pre><code class="language-html">
+&lt;div class=&quot;pet&quot; id=&quot;pet&quot;&gt;
+    &lt;img src=&quot;/images/my-art/pixel/rayplush.png&quot;&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </details>
+                    <details class="highlightbox">
+                        <summary>
+                            <h3>JS</h3>
+                        </summary>
+                        <pre><code class="language-js">
+&lt;script&gt;
+const pet = document.getElementById('pet');
+                    
+pet.addEventListener('click', function() {
+    pet.classList.add('squash-stretch');
+                    
+// Remove the class after the animation is done
+setTimeout(() =&gt; pet.classList.remove('squash-stretch'), 300); // 300ms = duration of the animation
+                            });
+&lt;/script&gt;
+                        </code></pre>
+                    </details>
+                </div>
+                
                            
             </div>
         </main>
@@ -132,6 +364,22 @@
         <!-- Footer is loaded by load.js from footer.html -->
     </div>
 
+    <!-- Squishy pet, click me!-->
+    <script>
+        const pet = document.getElementById('pet');
+
+        pet.addEventListener('click', function() {
+            pet.classList.add('squash-stretch');
+
+        // Remove the class after the animation is done
+            setTimeout(() => pet.classList.remove('squash-stretch'), 300); // 300ms = duration of the animation
+        });
+    </script>
+
+    <!-- Prism.js CSS - this is useful for the code blocks! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
 
 </body>
 </html>

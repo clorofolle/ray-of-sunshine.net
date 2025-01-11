@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../gallery.css">
+    <script src="../../../load.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="../gallery.js"></script>
+
+    <style>
+        main {
+            width: 100%;
+            height: 200vh;
+        }
+
+        .page img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    
+
+</head>
+<body>
+    
+    <div class="main-container">
+
+        
+        
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <!--- Language button -->
+                <div class="headerbox2" style="text-align: right;">
+                    <button class="langbuttoneng eng" onclick="toggleLanguage()"></button>
+                    <button class="langbuttonita ita hidden" onclick="toggleLanguage()"></button>
+                </div>
+
+                <!--- Back button -->
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="index.html">⪦ Back</a></button>
+                </div>
+
+                <h1>2020</h1>
+
+                <p class="eng">
+                    In my last year at the Arts Academy, I finally had the pleasure of having my first and only Illustration course. This year I drew a ton, though mostly exercises, and then studies for my "thesis project" - which for me was just an excuse to draw hitchhiker's guide fanart.
+                </p>
+
+                <p class="ita hidden">
+                    All'ultimo anno del mio corso all'Accademia di Belle Arti ho <em>finalmente</em> avuto il piacere di dare il primo ed unico esame incentrato sul disegno. È stato un anno in cui ho disegnato tanto - anche se per lo più esercizi, e poi studi e disegni preparatori per il progetto di tesi (nel mio caso, un'abile scusa per poter disegnare più fanart della guida galattica.)
+                </p>
+
+
+                
+                <h2 class="highlightbox eng">Digital and miscellaneous art</h2>
+                <h2 class="highlightbox ita hidden">Digitale e disegni sfusi</h2>
+                <!-- Main Gallery -->
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/stanza.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/capanna.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/ninfa2.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/acnh.jpg" alt="">
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/canyon.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/badland.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/utchara.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/utpapyrus.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/utpapyrus2.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/temtem.jpg" alt="">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/dreamextinction.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/dnd.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/snufkin.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/pdp.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/papedroga1.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/goodbye.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2020/digitalmisc/noises.jpg" alt="">
+                    </div>
+                </div>
+                
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modal-image">
+                    <div id="caption"></div>
+                </div>
+                
+                    
+                <h2 class="highlightbox eng">Flip through my sketchbook!</h2>
+                <h2 class="highlightbox ita hidden">Sfoglia il mio sketchbook!</h2>
+                <p class="eng">
+                    Click on the pages to flip them. Credits to <a href="https://codepen.io/jabaz007/pen/yMjpYP">Sanjay Mandani</a> for the code!
+                </p>
+                <p class="ita hidden">
+                    Clicca le pagine per sfogliarlo. Grazie a <a href="https://codepen.io/jabaz007/pen/yMjpYP">Sanjay Mandani</a> per il codice!
+                </p>
+                
+
+                <h3 class="eng">Vertical sketchbook:</h3>
+                <h3 class="ita hidden">Sketchbook verticale:</h3>
+                <!-- Sketchbook code gimmick! -->
+                <div class="bookWrapper">
+                    <div class="bookBg">
+                        <div class="pageBg">
+                            <div class="pageWrapper">
+
+
+                                <div id="page17" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right17-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-38.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left17 -->
+                                        
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page16" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right16-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-36.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left16 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-37.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page15" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right15-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-34.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left15 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-35.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page14" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right14-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-32.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left14 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-33.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page13" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right13-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-30.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left13 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-31.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page12" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right12-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-28.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left12 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-29.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page11" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right11-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-22.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left11 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-27.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page10" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right10-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-24.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left10 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-23.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>  
+                                </div>  
+                                <div id="page9" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right9-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-20.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left9 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-21.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page8" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right8-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-18.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left8 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-19.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page7" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right7-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-16.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left7 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-17.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page6" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right6-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-14.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left6 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-11.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page5" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right5-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-10.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left5 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-12.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page4" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right4-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-07.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left4 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-09.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page3" class="page">
+                                    <div class="pageFace front">
+                                        
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right3-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-05.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left3-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-06.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page2" class="page">
+                                    <div class="pageFace front">
+                                        <!-- right2-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-03.jpg">
+                                        <div class="pageFoldRight"></div>
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left2-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-04.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page1" class="page">
+                                    <div class="pageFace front">
+                                        <!-- right 1-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-01.jpg">
+                                        <div class="pageFoldRight"></div>
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left 1-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-02.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                           
+                    </div>
+                </div>
+
+                <!-- Page per page gallery - vertical -->
+                <details class="highlightbox orangeborder">
+                    <summary>
+                        <div class="eng">Page-per-page gallery</div>
+                        <div class="ita hidden">Galleria pagina per pagina</div>
+                    </summary>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-01.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-02.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-03.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-04.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-05.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-06.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-07.jpg" alt="">
+                        </div><div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-09.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-10.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-11.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-12.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-14.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-16.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-17.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-18.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-19.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-20.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-21.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-22.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-23.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-24.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-27.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-28.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-29.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-30.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-31.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-32.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-33.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-34.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-35.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-36.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-37.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/vertical/2020-sketchV-38.jpg" alt="">
+                        </div>
+                    </div>
+                </details>
+                
+
+                <h3 class="eng">Horizontal sketchbook:</h3>
+                <h3 class="ita hidden">Sketchbook orizzontale:</h3>
+
+                <div class="bookWrapper2">
+                    <div class="bookBg">
+                        <div class="pageBg">
+                            <div class="pageWrapper">
+
+
+                                <div id="page10" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right10-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-24.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left10 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-23.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>  
+                                </div>  
+                                <div id="page9" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right9-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-21.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left9 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-22.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page8" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right8-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-18.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left8 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-20.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page7" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right7-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-16.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left7 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-17.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page6" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right6-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-14.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left6 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-15.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page5" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right5-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-12.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left5 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-13.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page4" class="page">
+                                    <div class="pageFace front">
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right4-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-10.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left4 -->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-11.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page3" class="page">
+                                    <div class="pageFace front">
+                                        
+                                        <div class="pageFoldRight"></div>
+                                        <!-- right3-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-06.jpg">
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left3-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-07.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page2" class="page">
+                                    <div class="pageFace front">
+                                        <!-- right2-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-04.jpg">
+                                        <div class="pageFoldRight"></div>
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left2-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-05.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                                <div id="page1" class="page">
+                                    <div class="pageFace front">
+                                        <!-- right 1-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-01.jpg">
+                                        <div class="pageFoldRight"></div>
+                                    </div>
+                                    <div class="pageFace back">
+                                        <!-- left 1-->
+                                        <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-02.jpg">
+                                        <div class="pageFoldLeft"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                           
+                    </div>
+                </div>
+
+                <!-- Page per page gallery - horizontal -->
+
+                <details class="highlightbox orangebox">
+                    <summary>
+                        <div class="eng">Page-per-page gallery</div>
+                        <div class="ita hidden">Galleria pagina per pagina</div>
+                    </summary>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-01.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-02.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-04.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-05.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-06.jpg" alt="">
+                        </div><div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-07.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-10.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-11.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-12.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-13.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-14.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../images/my-art/drawings/2020/sketchbook/horizontal/2020-sketchH-15.jpg" alt="">
+                        </div>
+                    </div>
+                </details>
+
+                
+
+                <!--- Back button -->
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="index.html">⪦ Back</a></button>
+                </div>
+                    
+        </main>
+
+    </div>
+
+        
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>

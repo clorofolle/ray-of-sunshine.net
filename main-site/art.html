@@ -9,6 +9,33 @@
     <!-- Link to CSS & Javascript files -->
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <script src="../load.js"></script>
+
+    <style>
+        h3 {
+            margin-bottom: 3px;
+        }
+
+        .subtitle {
+            font-size: small;
+        }
+
+        .descpic {
+            max-width: 10vw;
+            max-height: 20vh;
+            transition: 0.5s ease;
+            border-radius: 3px;
+        }
+
+        .descpic:hover {
+            transform: scale(1.1);
+            transform: rotate(33deg);
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
     
 
 </head>
@@ -26,10 +53,46 @@
         <main class="greenbox hiddenscroll">  <!-- Main content -->
             <div class="content">
 
-                <p>
-                    WIP! Making galleries terrifies me :-)
+                <h2 class="eng">Arts & Crafts</h2>
+                <h2 class="ita hidden">Sezione artistica</h2>
+                <ul>
+                    <li>
+                        <a href="art/drawings/index.html">
+                            <h3 class="eng">Drawings</h3>
+                            <h3 class="ita hidden">Disegni</h3>
+                            <span class="subtitle eng">Traditional & Digital</span>
+                            <span class="subtitle ita hidden">Tradizionale & digitale</span><br>
+                            <img class="descpic" src="../images/my-art/chickens3.png" alt="Colored pencils sketch of a chicken pecking at the ground.">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="art/printmaking.html">
+                            <h3 class="eng">Printmaking</h3>
+                            <h3 class="ita hidden">Stampe</h3>
+                            <span class="subtitle eng">Lino, woodcut, etchings</span>
+                            <span class="subtitle ita hidden">Linoleografie ed incisioni</span><br>
+                            <img class="descpic" src="../images/my-art/print.jpg" alt="Linocut print of a cartoon fox.">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="art/zines.html">
+                            <h3>Zines</h3>
+                            <span class="subtitle eng">Finished projects in booklet format</span>
+                            <span class="subtitle ita hidden">Progetti finiti in formato libretto</span><br>
+                            <img class="descpic" src="../images/my-art/nostalgiacover.jpg" alt="Front cover of a booklet: a corner of a room in deep blue, titled 'Nostalgia'.">
+                        </a>
+                    </li>
+                    <!--
+                    <li>
+                        <h3>3d things</h3>
+                        <span class="subtitle">baby's first polymer clay attempts</span><br>
+                        <img class="descpic" src="../images/my-art/asrielsmall.png" alt="A wonky polymer clay statuine of Asriel.">
+                    </li>
+                    -->
                     
-                </p>
+                </ul>
                 
                            
             </div>

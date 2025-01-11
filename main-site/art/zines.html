@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <script src="../../load.js"></script>
+
+    <style>
+
+        .flex {
+            display: flex;
+        }
+
+        .title {
+            padding-top: 4%;
+            padding-left: 10%;
+        }
+
+        
+
+        h3 {
+            margin-bottom: 3px;
+        }
+
+        .subtitle {
+            font-size: small;
+        }
+
+        .descpic {
+            max-width: 10vw;
+            max-height: 20vh;
+            transition: 0.5s ease;
+            border-radius: 3px;
+        }
+
+        .descpic:hover {
+            transform: scale(1.1);
+            transform: rotate(33deg);
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <h2>Zines</h2>
+                
+                <p class="eng">
+                    I am not a prolific maker of finished things.<br>
+                    Displayed with <a href="https://jeremyoduber.itch.io/js-zine"><em>Reader For Electric Zine Maker</em></a>!
+                </p>
+                <p class="ita hidden">
+                    Non sono una prolifica creatrice di roba finita.<br>
+                    Grazie al <a href="https://jeremyoduber.itch.io/js-zine"><em>Reader For Electric Zine Maker</em></a>!
+                </p>
+
+                <div class="highlightbox">
+                    <div class="flex">
+                        <img src="../../images/my-art/nostalgiacover.jpg" style="width: 15vw" alt="">
+                        
+                        <div class="title">
+                            <a href="drawings/nostalgiait/index.html">
+                                <h3>
+                                    Nostalgia 🇮🇹
+                                </h3>
+                            </a>
+                            <p class="eng">
+                                A project completed during during uni, about a feeling that used to be very present in my mind and heart. <br> Watercolors!<br>It's only available in Italian so far, sorry.
+                            </p>
+                            <p class="ita hidden">
+                                Un progettino completato durante un'esame all'accademia. Parla di una sensazione che mi era molto cara e vicina, specie qualche anno fa. <br> Acquerelli!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                           
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>
