@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="nutshell.js"></script>
+   
+    <!-- Alas, it looks like Nutshell doesn't work in details elements anymore as of January 2025. Because of this, summary and details elements have been replaced for the moment. -->
+     
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
+    
+    <style>
+
+        .nutshell-bubble-overflow-section em, .nutshell-bubble-overflow-section span {
+            color: #76519f;
+        }
+
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+        }
+
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <a href="#test">:This is a regular, working Nutshell.</a>
+    
+        <br><br><br>
+        <details>
+            <summary>
+                <a href="#test">:This is a regular, working Nutshell - but also a Summary element.</a>
+            </summary>
+            <a href="#test">:But I, in the details, don't work!</a>
+        </details>
+    </div>
+
+
+    <div id="nutshells" style="display: none;">
+        <h1>test</h1>
+        <p>Hello! This is working!</p>
+    </div>
+</body>
+
+</html>

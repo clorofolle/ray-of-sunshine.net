@@ -11,12 +11,26 @@
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <script src="../load.js"></script>
     
+    
     <!-- Prism.js CSS - this is useful for the code blocks! -->
+    <script src="/nutshell.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet">
 
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
     
     <style>
+
+        .nutshell-bubble-overflow-section em, .nutshell-bubble-overflow-section span {
+            color: #76519f;
+        }
+
 
         h1 {
             font-size: 23px;
@@ -351,9 +365,18 @@ setTimeout(() =&gt; pet.classList.remove('squash-stretch'), 300); // 300ms = dur
                     </details>
                 </div>
                 
+                <a href="#whatsup">:whatsup???</a>
                            
+                <details>
+                    <summary><a href="#whatsup">:whatsup???</a></summary>
+                    <a href="#whatsup">:whatsup???</a>
+                </details>
             </div>
         </main>
+        <div id="nutshells" style="display: none;">
+        <h1>whatsup</h1>
+        <p>aaaaa</p>
+    </div>
 
         <aside class="sidebar-right" id="sidebar-right">
             <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
