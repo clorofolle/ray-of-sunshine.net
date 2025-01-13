@@ -14,9 +14,10 @@ body {
     font-family: 'Lora', Arial, Helvetica, sans-serif; /* If possible uses Lora */
 }
 
+
 /*Changes mouse pointer*/
 * {                                 
-    cursor: url(/snail.cur), default;
+    cursor: url(https://ray-of-sunshine.net/snail.cur), default;
 }
 
 /*divs with .ita or .eng classes appear normally, but once they gain the .hidden class, they disappear.*/
@@ -33,19 +34,19 @@ body {
 /* Main font */
 @font-face {
     font-family: 'Lora';
-    src: url(/fonts/lora-variablefont_wght-webfont.woff) format('woff'),
-        url(/fonts/lora-variablefont_wght-webfont.woff2) format('woff2');
+    src: url(https://ray-of-sunshine.net//fonts/lora-variablefont_wght-webfont.woff) format('woff'),
+        url(https://ray-of-sunshine.net//fonts/lora-variablefont_wght-webfont.woff2) format('woff2');
     }
 
 
 body a{
     text-decoration: underline; /* keep the underline */
-    color:rgb(178, 119, 219);
+    color:rgb(72, 0, 255);
 }
 
 body a:hover{
     text-decoration: underline; /* puts it back but only on hover! :> */
-    color: rgb(72, 0, 255);
+    color: rgb(178, 119, 219);
 }
 
 h1, h2, h3, h4, h5 {
@@ -57,7 +58,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .purple {
-    color: rgb(118, 81, 159)
+    color: rgb(126, 51, 211);
+    font-weight:900;
+    background-color: rgba(240, 248, 255, 0.339);
 }
 
 .smallerfont {
@@ -65,7 +68,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .highlightbox  {
-    background-color: #c6b1e7;
+    background-color: #d4c2f1;
     border-radius: 10px;
     padding: 2%;
     text-align: left;
@@ -164,12 +167,12 @@ main {
 .main-container {
     display: flex; /* Let's flex it, baby!! */
     margin: 1% 4%;
-    font-size: 14.7px; /* yeah i'm sure that's not good practice */
+    font-size: 1.05em;
 }
 
 .content {                  /* Actual stuff written in the page. yeah */
     margin: 5%;
-    text-align: left;
+    text-align: justify;
     font-weight: 450;
 }
 

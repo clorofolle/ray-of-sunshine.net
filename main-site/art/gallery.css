@@ -35,6 +35,20 @@
     transform: scale(1.05);
 }
 
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0px; /* Position it at the bottom */
+    left: 20%; /* Center horizontally */
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    
+    transition: opacity 0.2s ease-in-out;
+}
+
 /* Modal */
 .modal {
     display: none;
