@@ -239,6 +239,13 @@ figcaption {
     font-size: small;
 }
 
+.date {
+    font-size: smaller;
+    color: rgb(11, 90, 50);
+    margin: 0%;
+    text-align: right;
+}
+
 /*I use this to style "details" and "summary" elements, which I use often*/
 details h1, details h2, details h3, details h4, details h5, details h6{
     display: inline;
@@ -517,6 +524,11 @@ main {
     width: 20px;
 }
 
+
+/* Centers bullet points in centered lists */
+ul {
+    list-style-position: inside;
+}
 
 
 

@@ -8,14 +8,38 @@
     <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif" >
 
     <!-- Link to CSS & Javascript files -->
-    <link rel="stylesheet" type="text/css" href="../styles.css">
-    <script src="../load.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <script src="../../load.js"></script>
+    <script src="../../nutshell.js"></script>
+
+
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: false, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
 
     <style>
+
+        
         
         .thoughtbox {
             background-color: rgb(223, 249, 183);
             border-radius: 10px;
+            padding: 1%;
+        }
+
+        .thoughtlink {
+            margin-top: 2.5%;
+            background-color: rgb(223, 249, 183);
+            border-radius: 10px;
+            padding: 0%;
+        }
+
+        .thoughtlink h4 {
+            color: #e65100;
             padding: 1%;
         }
 
@@ -39,23 +63,43 @@
         </aside>
 
         <main class="greenbox hiddenscroll">  <!-- Main content -->
-            <div class="content">
-
+            <div class="content">  
+                <h2>Thought cabinet</h2>
                 <p>
-                    This section will be used in the future to collect any sort of miscellaneous thoughts and opinions 
-                    that might be of interest to somebody, as well as being home to opinions 
-                    that might need explaining for their controversial nature.
+                    Here, you will find more or less coherent thoughts. The idea is to curate nothing more than a  <a href="https://maggieappleton.com/garden-history#3-imperfection--learning-in-public">:digital garden</a> - thoughts here get planted, watered, tended to - sometimes some will wilt, other will flourish. But this is always a big work in progress - aren't we all, in the end?
                 </p>
+                <p>
+                    Because of this, for now, I'll be borrowing Maggie Appleton's categorisation system, to define how "complete" these ideas/thought are:
+                </p>
+                <ul>
+                    <li>
+                        🌱 <span class="orange">Seedlings</span>: freshy planted ideas. Will need quite a bit of tending - and who knows what they might turn into?
+                    </li>
+                    <li>
+                        🌿 <span class="orange">Budding</span>: the idea has grown into a more coherent thought. Time and prunings will still shape it.
+                    </li>
+                    <li>
+                        🌳 <span class="orange">Evergreen</span>: although the thought is not set in stone, I've invested quite a bit of time and energy in it. It's matured, and even though I might still tend to these thoughts, they're a bit more certain in my personal universe.
+                    </li>
+                </ul>
+                
                 <p>
                     <span class="purple">Like any human being, I reserve the right to grow and change!</span><br>
                     I am happy to have a conversation on any topic - just please keep it <a href="https://yesterweb.org/#social-etiquette">constructive</a>, please!
                 </p>
                 <br><br>
 
+                <div class="thoughtlink">
+                    <a href="../betterweb.html">
+                        <h4>🌳 Manifesto for a Better Web</h4>
+                    </a>
+                </div>
+
                 <details class="thoughtbox">
                     <summary>
-                        <h4>My stance on Piracy</h4>
+                        <h4>🌳 Is Piracy etical?</h4>
                     </summary>
+                    <p class="date">Planted somewhen in 2024</p>
                     <p>
                         Culture, at large, should be accessible by as a larger number of people as possible.<br>
                         I personally believe there are situations where pirating copyrighted content is acceptable:<br>
@@ -74,7 +118,7 @@
                                 They grossed 11.6 billion dollars just from licensed goods in 2022.
                             </li>
                             <li>
-                                Piracy for emulation purposes is always okay. Fuck Nintendo and fuck games from 20 yrs ago being sold at the same price they were sold back then.
+                                Piracy for emulation purposes is always okay. Old games are often almost impossible to purchase and run properly - and when they are, it's often in an effort by companies to try and sell them back to you at absurd prices.
                             </li>
                             <li>
                                 When actively boycotting a company, piracy should be avoided as well - or if you do pirate and enjoy 
@@ -89,7 +133,8 @@
                 </details>
                 <br>
                 <details class="thoughtbox" id="AI">
-                    <summary><h4>On use of generative AI</h4></summary>
+                    <summary><h4>🌿 On use of generative AI</h4></summary>
+                    <p class="date">Planted on March 2024</p>
                     <p>
                         The use - and sometimes, existence - of generative AI models is a controversial one, especially in spaces dedicated to art and hobbies - and for good reason!<br>
                         It's a conversation I'm personally invested in, myself. Though I don't do it under this name, I currently make money by doing art commissions - so I might be a bit biased about this.<br>
@@ -130,6 +175,12 @@
 
 
                 </details>
+
+                <div class="thoughtlink">
+                    <a href="dogtheory.html">
+                        <h4>🌱 Dog theory</h4>
+                    </a>
+                </div>
                            
             </div>
         </main>

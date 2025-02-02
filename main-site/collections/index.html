@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif">
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <script src="../../load.js"></script>
+    <script src="../../nutshell.js"></script>
+
+
+    <script>
+        Nutshell.setOptions({
+            startOnLoad: true, // Start Nutshell on load? (default: true)
+            lang: 'en', // Language (default: 'en', which is English)
+            dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
+        });
+    </script>
+
+    <style>
+
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <!-- Header content is loaded by load.js from header.html -->
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <!-- Left sidebar content is loaded by load.js from sidebar-left.html -->
+        </aside>
+
+        <main class="greenbox hiddenscroll"> <!-- Main content -->
+            <div class="content">
+                <h2>Collections</h2>
+                <p>I like to collect things - be them trinkets from around the web, images, texts. They become part of me. Feel free to rummage through my drawers.</p>
+
+                <ul>
+                    <li>
+                        <img style="max-width: 30px;" src="/images/old-graphics/pkmn/Celebi.gif"> <a href="hoard.html">Digital trinkets</a><br> (quizzes, adopts, buttons)
+                    </li>
+                    <li>
+                        <img src="/images/hoard/icons/pokemon-2/43.ico"> <a href="hoard-icons.html">Icon collection</a>
+                    </li>
+                    <li>
+                        <a href="poetry.html">Poetry</a>
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <!-- Right sidebar content is loaded by load.js from sidebar-right.html-->
+        </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+
+</html>
