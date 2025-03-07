@@ -24,6 +24,45 @@
             dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
         });
     </script>
+
+    <script>
+        // Function to get a cookie value by name, DEBUGGING ONLY
+function getCookie(name) {
+    let cookies = document.cookie.split('; '); // Split into individual cookies
+    for (let cookie of cookies) {
+        let [key, value] = cookie.split('='); // Separate name and value
+        if (key === name) return value; // If it's the one we need, return the value
+    }
+    return null; // If not found, return null
+}
+
+// Function to set a cookie
+function setCookie(name, value) {
+    document.cookie = name + "=" + value + "; path=/; SameSite=Lax";
+}
+
+
+// Function to toggle language
+function toggleLanguage() {
+    let currentLang = getCookie("language") || "en"; // Default to English if no cookie is found
+    let newLang = (currentLang === "en") ? "it" : "en"; // Toggle between "en" and "it"
+
+    document.documentElement.lang = newLang; // Update the <html> lang attribute
+    setCookie("language", newLang); // Store the new language in a cookie
+
+    document.getElementById("langButton").innerText = 
+        (newLang === "en") ? "Switch to Italian" : "Switch to English"; // Update button text
+}
+
+// Apply saved language when the page loads
+window.onload = function() {
+    let savedLang = getCookie("language") || "en"; // Get saved language or default to English
+    document.documentElement.lang = savedLang; // Apply the saved language
+    document.getElementById("langButton").innerText = 
+        (savedLang === "en") ? "Switch to Italian" : "Switch to English"; // Update button text
+};
+
+    </script>
     
     <style>
 
@@ -150,6 +189,9 @@
 
         <main class="greenbox hiddenscroll">  <!-- Main content -->
             <div class="content">
+
+                test
+                <button id="langButton" onclick="toggleLanguage()">Switch to Italian</button>
 
                 <h1>A collection of neat tricks</h1>
 
