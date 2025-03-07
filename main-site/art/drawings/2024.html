@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../gallery.css">
+    <script src="../../../load.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="../gallery.js"></script>
+
+    <style>
+        main {
+            width: 100%;
+            height: 200vh;
+        }
+
+        .page img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    
+
+</head>
+<body>
+    
+    <div class="main-container">
+
+        
+        
+        <main class="greenbox hiddenscroll">  <!-- Main content -->
+            <div class="content">
+
+                <!--- Language button -->
+                <div class="headerbox2" style="text-align: right;">
+                    <button class="langbuttoneng eng" onclick="toggleLanguage()"></button>
+                    <button class="langbuttonita ita hidden" onclick="toggleLanguage()"></button>
+                </div>
+
+                <!--- Back button -->
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="index.html">⪦ Back</a></button>
+                </div>
+
+                <h1>2024</h1>
+
+                
+
+                
+                
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modal-image">
+                    <div id="caption"></div>
+                </div>
+
+                <h2 class="highlightbox">Pixel</h2>
+                <!-- Main Gallery -->
+                <div class="gallery">
+                    <div class="gallery-item" style="max-width: 15%;">
+                        <img src="../../../images/my-art/drawings/2024/pixel/Lil Ray trim.png" alt="">
+                    </div>
+                    <div class="gallery-item-pixel">
+                        <img src="../../../images/my-art/drawings/2024/pixel/Liltil.png" alt="">
+                    </div>
+                    <div class="gallery-item-pixel">
+                        <img src="../../../images/my-art/drawings/2024/pixel/Raya-gif-1crop.gif" alt="">
+                    </div>
+                    <div class="gallery-item-pixel">
+                        <img src="../../../images/my-art/drawings/2024/pixel/Raya-gif-2crop.gif" alt="">
+                    </div>
+                    <div class="gallery-item-pixel">
+                        <img src="../../../images/my-art/drawings/2024/pixel/Raygif.gif" alt="">
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+               
+                <h2 class="highlightbox eng">Digital and miscellaneous art</h2>
+                <h2 class="highlightbox ita hidden">Digitale e disegni sfusi</h2>
+                <!-- Main Gallery -->
+                <div class="gallery">
+                    <div class="gallery-item"">
+                        <img src="../../../images/my-art/drawings/2024/Anatomy of a Ray.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2024/Ray1.jpg" alt="">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../../images/my-art/drawings/2024/Ray2.jpg" alt="">
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <!--- Back button -->
+                <div style="text-align: left;">
+                    <button class="backbutton"><a href="index.html">⪦ Back</a></button>
+                </div>
+        </main>
+
+    </div>
+
+        
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>
