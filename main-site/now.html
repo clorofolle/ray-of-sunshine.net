@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Little pieces of joy</title>
+    <link rel="icon" href="https://ray-of-sunshine.net/images/favicon32.gif" type="image/gif" >
+
+    <!-- Link to CSS & Javascript files -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="../load.js"></script>
+
+    <style>
+
+        header {
+            display: flex;
+        }
+
+        header h1 {
+            color: #e67700;
+            font-size: 3em;
+            display: inline;
+            
+        }
+
+        .backbutton {
+            
+        }
+
+        body {
+            background-color: #cbea9d;
+            background-image: none;
+        }
+
+        .nowbox {
+            background-color: rgba(251, 241, 227, 0.682);
+        }
+
+        .broider {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABZUlEQVRYR+2ZUQ6DMAxDx/0PvYG0IhbNsl+hgk3wt9bEbhKSwKZHuZ7zVdeW39N8bdcV7tu927XUTsV9kC8GLy+0Cawnad5w+86TKnIp3+pRJ8TtDxeqBKTrFUd/u4it9lJByiAV1s03isilSipYepQKTz2dPkySn56cHiS13w6i6uyUGmoGThPaGzpajii+OkTWUedpSkzxUqirZ3WfEld8TSW1v+Zu+jSeLpSGmOKpIySeElP8MKG0/NBcpfYP70yp4MOEuqd/VOht77cA8QqiBl7n2W6+7lCUAziBaQeMhxIqPBV4uNA7R98euHPU5ezpOaoEjKqjlo8SU/xhvV4ZovMjTYH0C4mdRy8rdG9IqUddSsTvTHuJ6f2uusjX5XbjmiOitzsCuo8n/MsLpS0uHTZSXPf05IaUVECKi4U6YTTnHD7mo6F2xHQ/FuqA6f7ecuTq6u98w6e9vnqYevLv/2d6AVGKz/BJauXzAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+    border-image-outset: 0.7; 
+    
+}
+
+.broider2 {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABK0lEQVRYR+1ZQQ6DMAyje8j+/649ZEzaKJqCItsp0EYqN1CbGsdOWihLkqskwbkcgK7v1/oPvjye3zG9nlcs+YBWxiqD9U1Geb4zOgogjyAItJfZLHH5gHqUI0lYxr0qsbt3qyLqeq7r7YKeyW4H6jGH3B/VsLoerVEUWAWM4p1mJtupWKBWQt68/EBZF6KUIWbtfHQPe73n+u5AUb1E5QoxyWYs3ELZ1EygWyeDdXQ4RtkOdLaZrGS8+LDXs4GiGmXj50v9LE8mt6w55V7PBo5qlM0kNNPdQMOuHw6oWh/nfnQTu2wmtmOxZmLj5Qca3S/eflxOA1R1vapJdXxYo+pCreNloGyLQ25ujSNv864GBA93dsB+np7f8H9UoJ8Z7geIVhNcNT/Nf6YP0HUAWC2NqucAAAAASUVORK5CYII=") 14 /  14px / 0 round;
+    border-width:  20px;
+    border-style:  solid;
+    border-image-outset: 0.7; 
+}
+
+.broider {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACt0lEQVR4Xu2dQW7DMAwEkz6k/39XH9L0bBnoYLC04yTbKymRGq1k0gnS+61/owTuo7N1sluBDougQM8G+vj9efwX8/71vdmUT/Nf2aBCPw2QXW+BLgTSE1agZwNdJb/u4Loj9d8+Q3Z3aAFtAVkBFehSxaQnskCvBnS4Lr78dHQlxgq9PIHhBAu0QIcJDE+nFWrLBApA89F6bSez61yWdw2UD8WjKkD38mlA6pUJSDq+QOXbLNqQAn11oPZOtDtOd+bR9qPXN16HpgkX6EKgQIeBFOgwUDqytuyh+chOdSONt8+I8TuUEixQ6DQIIO2wHW/9q1BLDPyfDpQUZVvPZz+kKH5q33VmJIg0II2n+Kmd4qf2AoVW1p7AAj0bKB2B6Ts2PdI0ntZDdrveuA6lhMhOQFI7xSd7gcrOr0ClZAkY2avQKlRKTrqTAslehVahUnLSnRRI9lihdgJan02Y5rP2NL4dH38uTwu0CdF81p7Gt+MLFHaoQOVDiRQfA7UTkD/ZaUGpneKT3T5T2stf7RvMtMNkTxVI4yk+2atQeYcWKEmyQCUh6U4KJHuPfBUqJSfdSYFkjxVqJ6CEyC75aHeKn9rXhOLWczohTSxsHafzL1Ao7Al4FXr1z+XtEV133I63/k//spiVuF1ggfb7oRvNkODit01V6PBPZNi61W7AtD8pjOLR+HGFUkBK+Gh7mh+NL1D5jChQ+bKETogGau9ECkDz0QLoG8V2POVD8aiuPbz1pAVYILaOJQAkCLKf3noWqLxz7A6mCkvH0waPH3kLiI7su9mJz3jZ9G4AraILVCqgCpXAyP1woBTAHplX94+PfIEOv20q0AJVL4ztFaRbz12rJX+oigrnV5s/bj1fbcHUWaUbXKALgQK92L/S0AqlQrf2LQF8KBWYI1Cgjhd6Fygicg5//yUArz2xyAsAAAAASUVORK5CYII=") 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+    border-image-outset: 0.7; 
+}
+
+.datadog {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAvElEQVRYR+2YUQ6AIAxDwYN4/3N5ECF+8IOalawfNKl/ho3Ot7IEaxF5qkidxYWyO/VLtN1Xe8TqcX7GzOur7/OHRHq6hUZk2C1F9V5E0URWwaiebusHqcjcEYlonXaYWK1l7eOBzyI59tElunoIsuRQPf05miXFzrdHUaL2KEqKHWePokTtUZQUO84eRYnaoygpdpyuR9kkWPvpE5W5Lm9fKDrXWN5D9fTvTNu33v+ekqbWn6NJAPR0GaIdwhiAOlN80QUAAAAASUVORK5CYII=") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+    border-image-outset: 0.7; 
+}
+
+
+.datadog2 {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACNElEQVR4Xu2cQW7DMBAD4z6k/39XHtIEvQW6DAhRUCBPr/RS6xHljVO018OfKoGr6qbZQ6DlEAhUoGUCZTsTKtAygbKdCd0N9PX3fH32cP38RptC9at14kfrU30E499sdkGqX60TEFqf6gU6EBLo8MiZBTJbjwmlBUinI7Jbp/5JH/sXKAxZgYaRJ2Ckm9BwCNWBjjuQLpDWk/+sTgEmf6rHZ2gKhBakhlfrs/1RvUDDR4BAy6/GdaBkeHc9PvJ3B0b3L1AiFOoCDYHR5QIlQqEu0BAYXS5QIhTqAg2B0eUIdPZVkBrYrbfvT6B+H9rNtAnt8sTf4hLwsR088uX+j7cTaHmLBSrQMoGyHSaUHsqkl/ut21H/pMdDiQxJrxMoG1L/pAt0IEDASBfobqDlE3a8HQ6l4wmUb1CgAi0TKNthQmnKkV7ut25H/ZPulN895WmHSK9HqmxI/ZNuQncntByI4+1wKB1PoHyDAhVomUDZDhNKU470cr91O+qfdKf87ilPO0R6PVJlQ+qfdBO6O6HlQBxvh0PpeALlGxSoQMsEynYmVKBlAmU7EyrQMoGyXZzQ9M1h7JfqV+vEj9aneoGGb04C/fY/7549ElS/WqeE0fpUj0eeFiCdGtitU/+k+21T+MwUaBh5Aka6Cd2d0PRzJAWEdny1Ptsf1eNQEmj2D2cFGj4CTOi3f7CnHbq7Hh/5uwOj+xcoEQp1gYbA6HKBEqFQF2gIjC4XKBEKdYGGwOjyN+y8AIItP3Y7AAAAAElFTkSuQmCC") 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+    border-image-outset: 0.7; 
+}
+    </style>
+
+    
+
+</head>
+<body>
+    <header class="headernow">
+        
+        <div class="backflex">
+             <!--- Back button -->
+             <button class="backbutton"><a href="index.html">⪦ Back</a></button>
+        </div>
+        <div>
+            <h1>/now</h1>
+        </div>
+        <div>
+            <!--- Language button -->
+            <button class="langbuttoneng eng" onclick="toggleLanguage()"></button>
+            <button class="langbuttonita ita hidden" onclick="toggleLanguage()"></button>
+        </div>
+        
+    </header>
+    
+
+    <div class="main-container">
+
+        
+
+        <main class="nowbox broider2 hiddenscroll">  <!-- Main content -->
+           
+        </main>
+
+        <aside class="sidebar-right">
+            
+       </aside>
+    </div>
+
+    <div class="footer" id="footer"> <!-- footer -->
+        <!-- Footer is loaded by load.js from footer.html -->
+    </div>
+
+
+</body>
+</html>
